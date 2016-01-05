@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerPicklistDependency" table="vtiger_picklist_dependency" catalog="vtiger" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="tabid" type="int">
+            <column name="tabid" not-null="true" />
+        </property>
+        <property name="sourcefield" type="string">
+            <column name="sourcefield" />
+        </property>
+        <property name="targetfield" type="string">
+            <column name="targetfield" />
+        </property>
+        <property name="sourcevalue" type="string">
+            <column name="sourcevalue" length="100" />
+        </property>
+        <property name="targetvalues" type="string">
+            <column name="targetvalues" length="65535" />
+        </property>
+        <property name="criteria" type="string">
+            <column name="criteria" length="65535" />
+        </property>
+    </class>
+</hibernate-mapping>

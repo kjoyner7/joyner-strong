@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerCampaign" table="vtiger_campaign" catalog="vtiger" optimistic-lock="version">
+        <id name="campaignid" type="int">
+            <column name="campaignid" />
+            <generator class="assigned" />
+        </id>
+        <property name="campaignNo" type="string">
+            <column name="campaign_no" length="100" not-null="true" />
+        </property>
+        <property name="campaignname" type="string">
+            <column name="campaignname" />
+        </property>
+        <property name="campaigntype" type="string">
+            <column name="campaigntype" length="200" />
+        </property>
+        <property name="campaignstatus" type="string">
+            <column name="campaignstatus" length="200" />
+        </property>
+        <property name="expectedrevenue" type="big_decimal">
+            <column name="expectedrevenue" precision="25" scale="8" />
+        </property>
+        <property name="budgetcost" type="big_decimal">
+            <column name="budgetcost" precision="25" scale="8" />
+        </property>
+        <property name="actualcost" type="big_decimal">
+            <column name="actualcost" precision="25" scale="8" />
+        </property>
+        <property name="expectedresponse" type="string">
+            <column name="expectedresponse" length="200" />
+        </property>
+        <property name="numsent" type="java.lang.Long">
+            <column name="numsent" precision="11" scale="0" />
+        </property>
+        <property name="productId" type="java.lang.Integer">
+            <column name="product_id" />
+        </property>
+        <property name="sponsor" type="string">
+            <column name="sponsor" />
+        </property>
+        <property name="targetaudience" type="string">
+            <column name="targetaudience" />
+        </property>
+        <property name="targetsize" type="java.lang.Integer">
+            <column name="targetsize" />
+        </property>
+        <property name="expectedresponsecount" type="java.lang.Integer">
+            <column name="expectedresponsecount" />
+        </property>
+        <property name="expectedsalescount" type="java.lang.Integer">
+            <column name="expectedsalescount" />
+        </property>
+        <property name="expectedroi" type="big_decimal">
+            <column name="expectedroi" precision="25" scale="8" />
+        </property>
+        <property name="actualresponsecount" type="java.lang.Integer">
+            <column name="actualresponsecount" />
+        </property>
+        <property name="actualsalescount" type="java.lang.Integer">
+            <column name="actualsalescount" />
+        </property>
+        <property name="actualroi" type="big_decimal">
+            <column name="actualroi" precision="25" scale="8" />
+        </property>
+        <property name="closingdate" type="date">
+            <column name="closingdate" length="10" />
+        </property>
+    </class>
+</hibernate-mapping>

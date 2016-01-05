@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerPaymentDuration" table="vtiger_payment_duration" catalog="vtiger" optimistic-lock="version">
+        <composite-id name="id" class="com.tmd.dao.data.VtigerPaymentDurationId">
+            <key-property name="paymentDurationId" type="java.lang.Integer">
+                <column name="payment_duration_id" />
+            </key-property>
+            <key-property name="paymentDuration" type="string">
+                <column name="payment_duration" length="200" />
+            </key-property>
+            <key-property name="sortorderid" type="java.lang.Integer">
+                <column name="sortorderid" />
+            </key-property>
+            <key-property name="presence" type="java.lang.Integer">
+                <column name="presence" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

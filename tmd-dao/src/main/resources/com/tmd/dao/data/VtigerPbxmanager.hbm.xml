@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerPbxmanager" table="vtiger_pbxmanager" catalog="vtiger" optimistic-lock="version">
+        <id name="pbxmanagerid" type="java.lang.Integer">
+            <column name="pbxmanagerid" />
+            <generator class="identity" />
+        </id>
+        <property name="direction" type="string">
+            <column name="direction" length="10" />
+        </property>
+        <property name="callstatus" type="string">
+            <column name="callstatus" length="20" />
+        </property>
+        <property name="starttime" type="timestamp">
+            <column name="starttime" length="19" />
+        </property>
+        <property name="endtime" type="timestamp">
+            <column name="endtime" length="19" />
+        </property>
+        <property name="totalduration" type="java.lang.Integer">
+            <column name="totalduration" />
+        </property>
+        <property name="billduration" type="java.lang.Integer">
+            <column name="billduration" />
+        </property>
+        <property name="recordingurl" type="string">
+            <column name="recordingurl" length="200" />
+        </property>
+        <property name="sourceuuid" type="string">
+            <column name="sourceuuid" length="100" />
+        </property>
+        <property name="gateway" type="string">
+            <column name="gateway" length="20" />
+        </property>
+        <property name="customer" type="string">
+            <column name="customer" length="100" />
+        </property>
+        <property name="user" type="string">
+            <column name="user" length="100" />
+        </property>
+        <property name="customernumber" type="string">
+            <column name="customernumber" length="100" />
+        </property>
+        <property name="customertype" type="string">
+            <column name="customertype" length="100" />
+        </property>
+    </class>
+</hibernate-mapping>

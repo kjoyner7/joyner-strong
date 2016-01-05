@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.ComVtigerWorkflows" table="com_vtiger_workflows" catalog="vtiger" optimistic-lock="version">
+        <id name="workflowId" type="java.lang.Integer">
+            <column name="workflow_id" />
+            <generator class="identity" />
+        </id>
+        <property name="moduleName" type="string">
+            <column name="module_name" length="100" />
+        </property>
+        <property name="summary" type="string">
+            <column name="summary" length="400" not-null="true" />
+        </property>
+        <property name="test" type="string">
+            <column name="test" length="65535" />
+        </property>
+        <property name="executionCondition" type="int">
+            <column name="execution_condition" not-null="true" />
+        </property>
+        <property name="defaultworkflow" type="java.lang.Integer">
+            <column name="defaultworkflow" />
+        </property>
+        <property name="type" type="string">
+            <column name="type" />
+        </property>
+        <property name="filtersavedinnew" type="java.lang.Integer">
+            <column name="filtersavedinnew" />
+        </property>
+        <property name="schtypeid" type="java.lang.Integer">
+            <column name="schtypeid" />
+        </property>
+        <property name="schdayofmonth" type="string">
+            <column name="schdayofmonth" length="100" />
+        </property>
+        <property name="schdayofweek" type="string">
+            <column name="schdayofweek" length="100" />
+        </property>
+        <property name="schannualdates" type="string">
+            <column name="schannualdates" length="100" />
+        </property>
+        <property name="schtime" type="string">
+            <column name="schtime" length="50" />
+        </property>
+        <property name="nexttriggerTime" type="timestamp">
+            <column name="nexttrigger_time" length="19" />
+        </property>
+    </class>
+</hibernate-mapping>

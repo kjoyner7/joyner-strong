@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerWebforms" table="vtiger_webforms" catalog="vtiger" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="name" type="string">
+            <column name="name" length="100" not-null="true" unique="true" />
+        </property>
+        <property name="publicid" type="string">
+            <column name="publicid" length="100" not-null="true" />
+        </property>
+        <property name="enabled" type="int">
+            <column name="enabled" not-null="true" />
+        </property>
+        <property name="targetmodule" type="string">
+            <column name="targetmodule" length="50" not-null="true" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" length="65535" />
+        </property>
+        <property name="ownerid" type="int">
+            <column name="ownerid" not-null="true" />
+        </property>
+        <property name="returnurl" type="string">
+            <column name="returnurl" length="250" />
+        </property>
+        <property name="captcha" type="int">
+            <column name="captcha" not-null="true" />
+        </property>
+        <property name="roundrobin" type="int">
+            <column name="roundrobin" not-null="true" />
+        </property>
+        <property name="roundrobinUserid" type="string">
+            <column name="roundrobin_userid" length="256" />
+        </property>
+        <property name="roundrobinLogic" type="int">
+            <column name="roundrobin_logic" not-null="true" />
+        </property>
+        <set name="vtigerWebformsFields" table="vtiger_webforms_field" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="webformid" not-null="true" />
+            </key>
+            <one-to-many class="com.tmd.dao.data.VtigerWebformsField" />
+        </set>
+    </class>
+</hibernate-mapping>

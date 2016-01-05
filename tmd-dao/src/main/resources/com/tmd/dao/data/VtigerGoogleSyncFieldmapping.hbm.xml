@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerGoogleSyncFieldmapping" table="vtiger_google_sync_fieldmapping" catalog="vtiger" optimistic-lock="version">
+        <composite-id name="id" class="com.tmd.dao.data.VtigerGoogleSyncFieldmappingId">
+            <key-property name="vtigerField" type="string">
+                <column name="vtiger_field" />
+            </key-property>
+            <key-property name="googleField" type="string">
+                <column name="google_field" />
+            </key-property>
+            <key-property name="googleFieldType" type="string">
+                <column name="google_field_type" />
+            </key-property>
+            <key-property name="googleCustomLabel" type="string">
+                <column name="google_custom_label" />
+            </key-property>
+            <key-property name="user" type="java.lang.Integer">
+                <column name="user" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

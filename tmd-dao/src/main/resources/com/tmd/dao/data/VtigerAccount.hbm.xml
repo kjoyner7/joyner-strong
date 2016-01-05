@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerAccount" table="vtiger_account" catalog="vtiger" optimistic-lock="version">
+        <id name="accountid" type="int">
+            <column name="accountid" />
+            <generator class="assigned" />
+        </id>
+        <property name="accountNo" type="string">
+            <column name="account_no" length="100" not-null="true" />
+        </property>
+        <property name="accountname" type="string">
+            <column name="accountname" length="100" not-null="true" />
+        </property>
+        <property name="parentid" type="java.lang.Integer">
+            <column name="parentid" />
+        </property>
+        <property name="accountType" type="string">
+            <column name="account_type" length="200" />
+        </property>
+        <property name="industry" type="string">
+            <column name="industry" length="200" />
+        </property>
+        <property name="annualrevenue" type="big_decimal">
+            <column name="annualrevenue" precision="25" scale="8" />
+        </property>
+        <property name="rating" type="string">
+            <column name="rating" length="200" />
+        </property>
+        <property name="ownership" type="string">
+            <column name="ownership" length="50" />
+        </property>
+        <property name="siccode" type="string">
+            <column name="siccode" length="50" />
+        </property>
+        <property name="tickersymbol" type="string">
+            <column name="tickersymbol" length="30" />
+        </property>
+        <property name="phone" type="string">
+            <column name="phone" length="30" />
+        </property>
+        <property name="otherphone" type="string">
+            <column name="otherphone" length="30" />
+        </property>
+        <property name="email1" type="string">
+            <column name="email1" length="100" />
+        </property>
+        <property name="email2" type="string">
+            <column name="email2" length="100" />
+        </property>
+        <property name="website" type="string">
+            <column name="website" length="100" />
+        </property>
+        <property name="fax" type="string">
+            <column name="fax" length="30" />
+        </property>
+        <property name="employees" type="java.lang.Integer">
+            <column name="employees" />
+        </property>
+        <property name="emailoptout" type="string">
+            <column name="emailoptout" length="3" />
+        </property>
+        <property name="notifyOwner" type="string">
+            <column name="notify_owner" length="3" />
+        </property>
+        <property name="isconvertedfromlead" type="string">
+            <column name="isconvertedfromlead" length="3" />
+        </property>
+    </class>
+</hibernate-mapping>

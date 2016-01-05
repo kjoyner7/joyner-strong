@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerPricebook" table="vtiger_pricebook" catalog="vtiger" optimistic-lock="version">
+        <id name="pricebookid" type="int">
+            <column name="pricebookid" />
+            <generator class="assigned" />
+        </id>
+        <property name="pricebookNo" type="string">
+            <column name="pricebook_no" length="100" not-null="true" />
+        </property>
+        <property name="bookname" type="string">
+            <column name="bookname" length="100" />
+        </property>
+        <property name="active" type="java.lang.Integer">
+            <column name="active" />
+        </property>
+        <property name="currencyId" type="int">
+            <column name="currency_id" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

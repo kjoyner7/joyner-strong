@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerShareduserinfo" table="vtiger_shareduserinfo" catalog="vtiger" optimistic-lock="version">
+        <composite-id name="id" class="com.tmd.dao.data.VtigerShareduserinfoId">
+            <key-property name="userid" type="int">
+                <column name="userid" />
+            </key-property>
+            <key-property name="shareduserid" type="int">
+                <column name="shareduserid" />
+            </key-property>
+            <key-property name="color" type="string">
+                <column name="color" length="50" />
+            </key-property>
+            <key-property name="visible" type="java.lang.Integer">
+                <column name="visible" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerNotes" table="vtiger_notes" catalog="vtiger" optimistic-lock="version">
+        <id name="notesid" type="int">
+            <column name="notesid" />
+            <generator class="assigned" />
+        </id>
+        <property name="noteNo" type="string">
+            <column name="note_no" length="100" not-null="true" />
+        </property>
+        <property name="title" type="string">
+            <column name="title" length="50" not-null="true" />
+        </property>
+        <property name="filename" type="string">
+            <column name="filename" length="200" />
+        </property>
+        <property name="notecontent" type="string">
+            <column name="notecontent" length="65535" />
+        </property>
+        <property name="folderid" type="int">
+            <column name="folderid" not-null="true" />
+        </property>
+        <property name="filetype" type="string">
+            <column name="filetype" length="50" />
+        </property>
+        <property name="filelocationtype" type="string">
+            <column name="filelocationtype" length="5" />
+        </property>
+        <property name="filedownloadcount" type="java.lang.Integer">
+            <column name="filedownloadcount" />
+        </property>
+        <property name="filestatus" type="java.lang.Integer">
+            <column name="filestatus" />
+        </property>
+        <property name="filesize" type="int">
+            <column name="filesize" not-null="true" />
+        </property>
+        <property name="fileversion" type="string">
+            <column name="fileversion" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>

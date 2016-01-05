@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerTicketcomments" table="vtiger_ticketcomments" catalog="vtiger" optimistic-lock="version">
+        <id name="commentid" type="java.lang.Integer">
+            <column name="commentid" />
+            <generator class="identity" />
+        </id>
+        <property name="ticketid" type="java.lang.Integer">
+            <column name="ticketid" />
+        </property>
+        <property name="comments" type="string">
+            <column name="comments" length="65535" />
+        </property>
+        <property name="ownerid" type="int">
+            <column name="ownerid" not-null="true" />
+        </property>
+        <property name="ownertype" type="string">
+            <column name="ownertype" length="10" />
+        </property>
+        <property name="createdtime" type="timestamp">
+            <column name="createdtime" length="19" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

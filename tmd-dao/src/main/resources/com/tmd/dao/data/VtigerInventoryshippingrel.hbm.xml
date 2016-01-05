@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerInventoryshippingrel" table="vtiger_inventoryshippingrel" catalog="vtiger" optimistic-lock="version">
+        <composite-id name="id" class="com.tmd.dao.data.VtigerInventoryshippingrelId">
+            <key-property name="id" type="java.lang.Integer">
+                <column name="id" />
+            </key-property>
+            <key-property name="shtax1" type="big_decimal">
+                <column name="shtax1" precision="7" scale="3" />
+            </key-property>
+            <key-property name="shtax2" type="big_decimal">
+                <column name="shtax2" precision="7" scale="3" />
+            </key-property>
+            <key-property name="shtax3" type="big_decimal">
+                <column name="shtax3" precision="7" scale="3" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

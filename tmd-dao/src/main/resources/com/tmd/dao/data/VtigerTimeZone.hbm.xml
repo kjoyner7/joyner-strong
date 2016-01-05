@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerTimeZone" table="vtiger_time_zone" catalog="vtiger" optimistic-lock="version">
+        <id name="timeZoneid" type="java.lang.Integer">
+            <column name="time_zoneid" />
+            <generator class="identity" />
+        </id>
+        <property name="timeZone" type="string">
+            <column name="time_zone" length="200" not-null="true" />
+        </property>
+        <property name="sortorderid" type="int">
+            <column name="sortorderid" not-null="true" />
+        </property>
+        <property name="presence" type="int">
+            <column name="presence" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

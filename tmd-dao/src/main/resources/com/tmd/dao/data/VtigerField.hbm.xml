@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerField" table="vtiger_field" catalog="vtiger" optimistic-lock="version">
+        <id name="fieldid" type="java.lang.Integer">
+            <column name="fieldid" />
+            <generator class="identity" />
+        </id>
+        <property name="tabid" type="int">
+            <column name="tabid" not-null="true" />
+        </property>
+        <property name="columnname" type="string">
+            <column name="columnname" length="30" not-null="true" />
+        </property>
+        <property name="tablename" type="string">
+            <column name="tablename" length="50" not-null="true" />
+        </property>
+        <property name="generatedtype" type="int">
+            <column name="generatedtype" not-null="true" />
+        </property>
+        <property name="uitype" type="string">
+            <column name="uitype" length="30" not-null="true" />
+        </property>
+        <property name="fieldname" type="string">
+            <column name="fieldname" length="50" not-null="true" />
+        </property>
+        <property name="fieldlabel" type="string">
+            <column name="fieldlabel" length="50" not-null="true" />
+        </property>
+        <property name="readonly" type="int">
+            <column name="readonly" not-null="true" />
+        </property>
+        <property name="presence" type="int">
+            <column name="presence" not-null="true" />
+        </property>
+        <property name="defaultvalue" type="string">
+            <column name="defaultvalue" length="65535" />
+        </property>
+        <property name="maximumlength" type="java.lang.Integer">
+            <column name="maximumlength" />
+        </property>
+        <property name="sequence" type="java.lang.Integer">
+            <column name="sequence" />
+        </property>
+        <property name="block" type="java.lang.Integer">
+            <column name="block" />
+        </property>
+        <property name="displaytype" type="java.lang.Integer">
+            <column name="displaytype" />
+        </property>
+        <property name="typeofdata" type="string">
+            <column name="typeofdata" length="100" />
+        </property>
+        <property name="quickcreate" type="int">
+            <column name="quickcreate" not-null="true" />
+        </property>
+        <property name="quickcreatesequence" type="java.lang.Integer">
+            <column name="quickcreatesequence" />
+        </property>
+        <property name="infoType" type="string">
+            <column name="info_type" length="20" />
+        </property>
+        <property name="masseditable" type="int">
+            <column name="masseditable" not-null="true" />
+        </property>
+        <property name="helpinfo" type="string">
+            <column name="helpinfo" length="65535" />
+        </property>
+        <property name="summaryfield" type="int">
+            <column name="summaryfield" not-null="true" />
+        </property>
+        <set name="vtigerWebformsFields" table="vtiger_webforms_field" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="fieldname" not-null="true" />
+            </key>
+            <one-to-many class="com.tmd.dao.data.VtigerWebformsField" />
+        </set>
+    </class>
+</hibernate-mapping>

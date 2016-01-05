@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerAuditTrial" table="vtiger_audit_trial" catalog="vtiger" optimistic-lock="version">
+        <id name="auditid" type="int">
+            <column name="auditid" />
+            <generator class="assigned" />
+        </id>
+        <property name="userid" type="java.lang.Integer">
+            <column name="userid" />
+        </property>
+        <property name="module" type="string">
+            <column name="module" />
+        </property>
+        <property name="action" type="string">
+            <column name="action" />
+        </property>
+        <property name="recordid" type="string">
+            <column name="recordid" length="20" />
+        </property>
+        <property name="actiondate" type="timestamp">
+            <column name="actiondate" length="19" />
+        </property>
+    </class>
+</hibernate-mapping>

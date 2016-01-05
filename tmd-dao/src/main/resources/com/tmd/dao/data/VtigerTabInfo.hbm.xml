@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerTabInfo" table="vtiger_tab_info" catalog="vtiger" optimistic-lock="version">
+        <composite-id name="id" class="com.tmd.dao.data.VtigerTabInfoId">
+            <key-property name="tabid" type="java.lang.Integer">
+                <column name="tabid" />
+            </key-property>
+            <key-property name="prefname" type="string">
+                <column name="prefname" length="256" />
+            </key-property>
+            <key-property name="prefvalue" type="string">
+                <column name="prefvalue" length="256" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

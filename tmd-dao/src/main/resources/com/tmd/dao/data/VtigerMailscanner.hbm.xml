@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerMailscanner" table="vtiger_mailscanner" catalog="vtiger" optimistic-lock="version">
+        <id name="scannerid" type="java.lang.Integer">
+            <column name="scannerid" />
+            <generator class="identity" />
+        </id>
+        <property name="scannername" type="string">
+            <column name="scannername" length="30" />
+        </property>
+        <property name="server" type="string">
+            <column name="server" length="100" />
+        </property>
+        <property name="protocol" type="string">
+            <column name="protocol" length="10" />
+        </property>
+        <property name="username" type="string">
+            <column name="username" />
+        </property>
+        <property name="password" type="string">
+            <column name="password" />
+        </property>
+        <property name="ssltype" type="string">
+            <column name="ssltype" length="10" />
+        </property>
+        <property name="sslmethod" type="string">
+            <column name="sslmethod" length="30" />
+        </property>
+        <property name="connecturl" type="string">
+            <column name="connecturl" />
+        </property>
+        <property name="searchfor" type="string">
+            <column name="searchfor" length="10" />
+        </property>
+        <property name="markas" type="string">
+            <column name="markas" length="10" />
+        </property>
+        <property name="isvalid" type="java.lang.Integer">
+            <column name="isvalid" />
+        </property>
+        <property name="timeZone" type="string">
+            <column name="time_zone" length="10" />
+        </property>
+    </class>
+</hibernate-mapping>

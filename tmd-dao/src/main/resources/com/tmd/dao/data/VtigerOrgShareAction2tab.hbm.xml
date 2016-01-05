@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerOrgShareAction2tab" table="vtiger_org_share_action2tab" catalog="vtiger" optimistic-lock="version">
+        <composite-id name="id" class="com.tmd.dao.data.VtigerOrgShareAction2tabId">
+            <key-property name="shareActionId" type="int">
+                <column name="share_action_id" />
+            </key-property>
+            <key-property name="tabid" type="int">
+                <column name="tabid" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

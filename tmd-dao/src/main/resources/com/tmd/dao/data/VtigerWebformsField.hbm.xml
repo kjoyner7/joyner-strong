@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerWebformsField" table="vtiger_webforms_field" catalog="vtiger" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="vtigerField" class="com.tmd.dao.data.VtigerField" fetch="select">
+            <column name="fieldname" not-null="true" />
+        </many-to-one>
+        <many-to-one name="vtigerWebforms" class="com.tmd.dao.data.VtigerWebforms" fetch="select">
+            <column name="webformid" not-null="true" />
+        </many-to-one>
+        <property name="neutralizedfield" type="string">
+            <column name="neutralizedfield" length="50" not-null="true" />
+        </property>
+        <property name="defaultvalue" type="string">
+            <column name="defaultvalue" length="200" />
+        </property>
+        <property name="required" type="int">
+            <column name="required" not-null="true" />
+        </property>
+        <property name="sequence" type="java.lang.Integer">
+            <column name="sequence" />
+        </property>
+        <property name="hidden" type="java.lang.Integer">
+            <column name="hidden" />
+        </property>
+    </class>
+</hibernate-mapping>

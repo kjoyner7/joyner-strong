@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerQuotes" table="vtiger_quotes" catalog="vtiger" optimistic-lock="version">
+        <id name="quoteid" type="int">
+            <column name="quoteid" />
+            <generator class="assigned" />
+        </id>
+        <property name="subject" type="string">
+            <column name="subject" length="100" />
+        </property>
+        <property name="potentialid" type="java.lang.Integer">
+            <column name="potentialid" />
+        </property>
+        <property name="quotestage" type="string">
+            <column name="quotestage" length="200" />
+        </property>
+        <property name="validtill" type="date">
+            <column name="validtill" length="10" />
+        </property>
+        <property name="contactid" type="java.lang.Integer">
+            <column name="contactid" />
+        </property>
+        <property name="quoteNo" type="string">
+            <column name="quote_no" length="100" />
+        </property>
+        <property name="subtotal" type="big_decimal">
+            <column name="subtotal" precision="25" scale="8" />
+        </property>
+        <property name="carrier" type="string">
+            <column name="carrier" length="200" />
+        </property>
+        <property name="shipping" type="string">
+            <column name="shipping" length="100" />
+        </property>
+        <property name="inventorymanager" type="java.lang.Integer">
+            <column name="inventorymanager" />
+        </property>
+        <property name="type" type="string">
+            <column name="type" length="100" />
+        </property>
+        <property name="adjustment" type="big_decimal">
+            <column name="adjustment" precision="25" scale="8" />
+        </property>
+        <property name="total" type="big_decimal">
+            <column name="total" precision="25" scale="8" />
+        </property>
+        <property name="taxtype" type="string">
+            <column name="taxtype" length="25" />
+        </property>
+        <property name="discountPercent" type="big_decimal">
+            <column name="discount_percent" precision="25" scale="3" />
+        </property>
+        <property name="discountAmount" type="big_decimal">
+            <column name="discount_amount" precision="25" scale="8" />
+        </property>
+        <property name="SHAmount" type="big_decimal">
+            <column name="s_h_amount" precision="25" scale="8" />
+        </property>
+        <property name="accountid" type="java.lang.Integer">
+            <column name="accountid" />
+        </property>
+        <property name="termsConditions" type="string">
+            <column name="terms_conditions" length="65535" />
+        </property>
+        <property name="currencyId" type="int">
+            <column name="currency_id" not-null="true" />
+        </property>
+        <property name="conversionRate" type="big_decimal">
+            <column name="conversion_rate" precision="10" scale="3" not-null="true" />
+        </property>
+        <property name="preTaxTotal" type="big_decimal">
+            <column name="pre_tax_total" precision="25" scale="8" />
+        </property>
+        <property name="SHPercent" type="java.lang.Integer">
+            <column name="s_h_percent" />
+        </property>
+    </class>
+</hibernate-mapping>

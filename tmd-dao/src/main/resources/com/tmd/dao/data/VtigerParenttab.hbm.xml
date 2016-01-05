@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerParenttab" table="vtiger_parenttab" catalog="vtiger" optimistic-lock="version">
+        <id name="parenttabid" type="int">
+            <column name="parenttabid" />
+            <generator class="assigned" />
+        </id>
+        <property name="parenttabLabel" type="string">
+            <column name="parenttab_label" length="100" not-null="true" />
+        </property>
+        <property name="sequence" type="int">
+            <column name="sequence" not-null="true" />
+        </property>
+        <property name="visible" type="int">
+            <column name="visible" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

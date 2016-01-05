@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerReportdatefilter" table="vtiger_reportdatefilter" catalog="vtiger" optimistic-lock="version">
+        <id name="datefilterid" type="int">
+            <column name="datefilterid" />
+            <generator class="assigned" />
+        </id>
+        <property name="datecolumnname" type="string">
+            <column name="datecolumnname" length="250" />
+        </property>
+        <property name="datefilter" type="string">
+            <column name="datefilter" length="250" />
+        </property>
+        <property name="startdate" type="date">
+            <column name="startdate" length="10" />
+        </property>
+        <property name="enddate" type="date">
+            <column name="enddate" length="10" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerDatashareModuleRel" table="vtiger_datashare_module_rel" catalog="vtiger" optimistic-lock="version">
+        <id name="shareid" type="int">
+            <column name="shareid" />
+            <generator class="assigned" />
+        </id>
+        <property name="tabid" type="int">
+            <column name="tabid" not-null="true" />
+        </property>
+        <property name="relationtype" type="string">
+            <column name="relationtype" length="200" />
+        </property>
+    </class>
+</hibernate-mapping>

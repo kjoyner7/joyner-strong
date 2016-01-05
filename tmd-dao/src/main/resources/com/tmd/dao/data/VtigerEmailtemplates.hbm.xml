@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerEmailtemplates" table="vtiger_emailtemplates" catalog="vtiger" optimistic-lock="version">
+        <id name="templateid" type="java.lang.Integer">
+            <column name="templateid" />
+            <generator class="identity" />
+        </id>
+        <property name="foldername" type="string">
+            <column name="foldername" length="100" />
+        </property>
+        <property name="templatename" type="string">
+            <column name="templatename" length="100" />
+        </property>
+        <property name="subject" type="string">
+            <column name="subject" length="100" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" length="65535" />
+        </property>
+        <property name="body" type="string">
+            <column name="body" length="65535" />
+        </property>
+        <property name="deleted" type="int">
+            <column name="deleted" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

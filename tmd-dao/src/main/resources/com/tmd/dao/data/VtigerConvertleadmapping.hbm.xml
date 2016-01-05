@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerConvertleadmapping" table="vtiger_convertleadmapping" catalog="vtiger" optimistic-lock="version">
+        <id name="cfmid" type="java.lang.Integer">
+            <column name="cfmid" />
+            <generator class="identity" />
+        </id>
+        <property name="leadfid" type="int">
+            <column name="leadfid" not-null="true" />
+        </property>
+        <property name="accountfid" type="java.lang.Integer">
+            <column name="accountfid" />
+        </property>
+        <property name="contactfid" type="java.lang.Integer">
+            <column name="contactfid" />
+        </property>
+        <property name="potentialfid" type="java.lang.Integer">
+            <column name="potentialfid" />
+        </property>
+        <property name="editable" type="java.lang.Integer">
+            <column name="editable" />
+        </property>
+    </class>
+</hibernate-mapping>

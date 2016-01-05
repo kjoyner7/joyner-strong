@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerSystems" table="vtiger_systems" catalog="vtiger" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="server" type="string">
+            <column name="server" length="100" />
+        </property>
+        <property name="serverPort" type="java.lang.Integer">
+            <column name="server_port" />
+        </property>
+        <property name="serverUsername" type="string">
+            <column name="server_username" length="100" />
+        </property>
+        <property name="serverPassword" type="string">
+            <column name="server_password" length="100" />
+        </property>
+        <property name="serverType" type="string">
+            <column name="server_type" length="20" />
+        </property>
+        <property name="smtpAuth" type="string">
+            <column name="smtp_auth" length="5" />
+        </property>
+        <property name="serverPath" type="string">
+            <column name="server_path" length="256" />
+        </property>
+        <property name="fromEmailField" type="string">
+            <column name="from_email_field" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>

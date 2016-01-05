@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerMailmanagerMailattachments" table="vtiger_mailmanager_mailattachments" catalog="vtiger" optimistic-lock="version">
+        <composite-id name="id" class="com.tmd.dao.data.VtigerMailmanagerMailattachmentsId">
+            <key-property name="userid" type="java.lang.Integer">
+                <column name="userid" />
+            </key-property>
+            <key-property name="muid" type="java.lang.Integer">
+                <column name="muid" />
+            </key-property>
+            <key-property name="aname" type="string">
+                <column name="aname" length="100" />
+            </key-property>
+            <key-property name="lastsavedtime" type="java.lang.Integer">
+                <column name="lastsavedtime" />
+            </key-property>
+            <key-property name="attachid" type="int">
+                <column name="attachid" />
+            </key-property>
+            <key-property name="path" type="string">
+                <column name="path" length="200" />
+            </key-property>
+            <key-property name="cid" type="string">
+                <column name="cid" length="50" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

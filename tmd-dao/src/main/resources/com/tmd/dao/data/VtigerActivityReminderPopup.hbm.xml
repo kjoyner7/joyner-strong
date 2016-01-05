@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerActivityReminderPopup" table="vtiger_activity_reminder_popup" catalog="vtiger" optimistic-lock="version">
+        <id name="reminderid" type="java.lang.Integer">
+            <column name="reminderid" />
+            <generator class="identity" />
+        </id>
+        <property name="semodule" type="string">
+            <column name="semodule" length="100" not-null="true" />
+        </property>
+        <property name="recordid" type="int">
+            <column name="recordid" not-null="true" />
+        </property>
+        <property name="dateStart" type="date">
+            <column name="date_start" length="10" not-null="true" />
+        </property>
+        <property name="timeStart" type="string">
+            <column name="time_start" length="100" not-null="true" />
+        </property>
+        <property name="status" type="int">
+            <column name="status" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

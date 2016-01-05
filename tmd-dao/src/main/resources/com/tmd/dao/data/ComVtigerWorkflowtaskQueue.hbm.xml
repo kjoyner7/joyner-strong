@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.ComVtigerWorkflowtaskQueue" table="com_vtiger_workflowtask_queue" catalog="vtiger" optimistic-lock="version">
+        <composite-id name="id" class="com.tmd.dao.data.ComVtigerWorkflowtaskQueueId">
+            <key-property name="taskId" type="java.lang.Integer">
+                <column name="task_id" />
+            </key-property>
+            <key-property name="entityId" type="string">
+                <column name="entity_id" length="100" />
+            </key-property>
+            <key-property name="doAfter" type="java.lang.Integer">
+                <column name="do_after" />
+            </key-property>
+            <key-property name="taskContents" type="string">
+                <column name="task_contents" length="65535" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

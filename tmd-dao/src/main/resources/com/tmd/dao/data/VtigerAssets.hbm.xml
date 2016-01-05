@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerAssets" table="vtiger_assets" catalog="vtiger" optimistic-lock="version">
+        <id name="assetsid" type="int">
+            <column name="assetsid" />
+            <generator class="foreign">
+                <param name="property">vtigerCrmentity</param>
+            </generator>
+        </id>
+        <one-to-one name="vtigerCrmentity" class="com.tmd.dao.data.VtigerCrmentity" constrained="true"></one-to-one>
+        <property name="assetNo" type="string">
+            <column name="asset_no" length="30" not-null="true" />
+        </property>
+        <property name="account" type="java.lang.Integer">
+            <column name="account" />
+        </property>
+        <property name="product" type="int">
+            <column name="product" not-null="true" />
+        </property>
+        <property name="serialnumber" type="string">
+            <column name="serialnumber" length="200" />
+        </property>
+        <property name="datesold" type="date">
+            <column name="datesold" length="10" />
+        </property>
+        <property name="dateinservice" type="date">
+            <column name="dateinservice" length="10" />
+        </property>
+        <property name="assetstatus" type="string">
+            <column name="assetstatus" length="200" />
+        </property>
+        <property name="tagnumber" type="string">
+            <column name="tagnumber" length="300" />
+        </property>
+        <property name="invoiceid" type="java.lang.Integer">
+            <column name="invoiceid" />
+        </property>
+        <property name="shippingmethod" type="string">
+            <column name="shippingmethod" length="200" />
+        </property>
+        <property name="shippingtrackingnumber" type="string">
+            <column name="shippingtrackingnumber" length="200" />
+        </property>
+        <property name="assetname" type="string">
+            <column name="assetname" length="100" />
+        </property>
+        <property name="contact" type="java.lang.Integer">
+            <column name="contact" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.ComVtigerWorkflowtemplates" table="com_vtiger_workflowtemplates" catalog="vtiger" optimistic-lock="version">
+        <id name="templateId" type="java.lang.Integer">
+            <column name="template_id" />
+            <generator class="identity" />
+        </id>
+        <property name="moduleName" type="string">
+            <column name="module_name" length="100" />
+        </property>
+        <property name="title" type="string">
+            <column name="title" length="400" />
+        </property>
+        <property name="template" type="string">
+            <column name="template" length="65535" />
+        </property>
+    </class>
+</hibernate-mapping>

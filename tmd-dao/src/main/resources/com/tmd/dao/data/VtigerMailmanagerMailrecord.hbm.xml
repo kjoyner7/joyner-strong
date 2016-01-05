@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerMailmanagerMailrecord" table="vtiger_mailmanager_mailrecord" catalog="vtiger" optimistic-lock="version">
+        <composite-id name="id" class="com.tmd.dao.data.VtigerMailmanagerMailrecordId">
+            <key-property name="userid" type="java.lang.Integer">
+                <column name="userid" />
+            </key-property>
+            <key-property name="mfrom" type="string">
+                <column name="mfrom" />
+            </key-property>
+            <key-property name="mto" type="string">
+                <column name="mto" />
+            </key-property>
+            <key-property name="mcc" type="string">
+                <column name="mcc" length="500" />
+            </key-property>
+            <key-property name="mbcc" type="string">
+                <column name="mbcc" length="500" />
+            </key-property>
+            <key-property name="mdate" type="string">
+                <column name="mdate" length="20" />
+            </key-property>
+            <key-property name="msubject" type="string">
+                <column name="msubject" length="500" />
+            </key-property>
+            <key-property name="mbody" type="string">
+                <column name="mbody" length="65535" />
+            </key-property>
+            <key-property name="mcharset" type="string">
+                <column name="mcharset" length="10" />
+            </key-property>
+            <key-property name="misbodyhtml" type="java.lang.Integer">
+                <column name="misbodyhtml" />
+            </key-property>
+            <key-property name="mplainmessage" type="java.lang.Integer">
+                <column name="mplainmessage" />
+            </key-property>
+            <key-property name="mhtmlmessage" type="java.lang.Integer">
+                <column name="mhtmlmessage" />
+            </key-property>
+            <key-property name="muniqueid" type="string">
+                <column name="muniqueid" length="500" />
+            </key-property>
+            <key-property name="mbodyparsed" type="java.lang.Integer">
+                <column name="mbodyparsed" />
+            </key-property>
+            <key-property name="muid" type="java.lang.Integer">
+                <column name="muid" />
+            </key-property>
+            <key-property name="lastsavedtime" type="java.lang.Integer">
+                <column name="lastsavedtime" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

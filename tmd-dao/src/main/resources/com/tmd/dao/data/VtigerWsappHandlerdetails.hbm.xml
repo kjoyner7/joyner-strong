@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerWsappHandlerdetails" table="vtiger_wsapp_handlerdetails" catalog="vtiger" optimistic-lock="version">
+        <composite-id name="id" class="com.tmd.dao.data.VtigerWsappHandlerdetailsId">
+            <key-property name="type" type="string">
+                <column name="type" length="200" />
+            </key-property>
+            <key-property name="handlerclass" type="string">
+                <column name="handlerclass" length="100" />
+            </key-property>
+            <key-property name="handlerpath" type="string">
+                <column name="handlerpath" length="300" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

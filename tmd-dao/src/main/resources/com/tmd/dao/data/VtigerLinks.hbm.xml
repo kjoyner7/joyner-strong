@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerLinks" table="vtiger_links" catalog="vtiger" optimistic-lock="version">
+        <id name="linkid" type="int">
+            <column name="linkid" />
+            <generator class="assigned" />
+        </id>
+        <property name="tabid" type="java.lang.Integer">
+            <column name="tabid" />
+        </property>
+        <property name="linktype" type="string">
+            <column name="linktype" length="50" />
+        </property>
+        <property name="linklabel" type="string">
+            <column name="linklabel" length="50" />
+        </property>
+        <property name="linkurl" type="string">
+            <column name="linkurl" />
+        </property>
+        <property name="linkicon" type="string">
+            <column name="linkicon" length="100" />
+        </property>
+        <property name="sequence" type="java.lang.Integer">
+            <column name="sequence" />
+        </property>
+        <property name="handlerPath" type="string">
+            <column name="handler_path" length="128" />
+        </property>
+        <property name="handlerClass" type="string">
+            <column name="handler_class" length="50" />
+        </property>
+        <property name="handler" type="string">
+            <column name="handler" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>

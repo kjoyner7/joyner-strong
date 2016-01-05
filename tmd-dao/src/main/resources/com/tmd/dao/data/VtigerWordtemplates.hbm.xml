@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerWordtemplates" table="vtiger_wordtemplates" catalog="vtiger" optimistic-lock="version">
+        <id name="templateid" type="int">
+            <column name="templateid" />
+            <generator class="assigned" />
+        </id>
+        <property name="filename" type="string">
+            <column name="filename" length="100" not-null="true" />
+        </property>
+        <property name="module" type="string">
+            <column name="module" length="30" not-null="true" />
+        </property>
+        <property name="dateEntered" type="timestamp">
+            <column name="date_entered" length="19" not-null="true" />
+        </property>
+        <property name="parentType" type="string">
+            <column name="parent_type" length="50" not-null="true" />
+        </property>
+        <property name="data" type="binary">
+            <column name="data" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" length="65535" />
+        </property>
+        <property name="filesize" type="string">
+            <column name="filesize" length="50" not-null="true" />
+        </property>
+        <property name="filetype" type="string">
+            <column name="filetype" length="20" not-null="true" />
+        </property>
+        <property name="deleted" type="int">
+            <column name="deleted" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

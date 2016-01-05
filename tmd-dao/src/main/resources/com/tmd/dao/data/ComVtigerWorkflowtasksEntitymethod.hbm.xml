@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.ComVtigerWorkflowtasksEntitymethod" table="com_vtiger_workflowtasks_entitymethod" catalog="vtiger" optimistic-lock="version">
+        <id name="workflowtasksEntitymethodId" type="int">
+            <column name="workflowtasks_entitymethod_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="moduleName" type="string">
+            <column name="module_name" length="100" />
+        </property>
+        <property name="methodName" type="string">
+            <column name="method_name" length="100" />
+        </property>
+        <property name="functionPath" type="string">
+            <column name="function_path" length="400" />
+        </property>
+        <property name="functionName" type="string">
+            <column name="function_name" length="100" />
+        </property>
+    </class>
+</hibernate-mapping>

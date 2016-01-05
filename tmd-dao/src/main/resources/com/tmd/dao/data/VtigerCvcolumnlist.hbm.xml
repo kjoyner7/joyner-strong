@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerCvcolumnlist" table="vtiger_cvcolumnlist" catalog="vtiger" optimistic-lock="version">
+        <composite-id name="id" class="com.tmd.dao.data.VtigerCvcolumnlistId">
+            <key-property name="cvid" type="int">
+                <column name="cvid" />
+            </key-property>
+            <key-property name="columnindex" type="int">
+                <column name="columnindex" />
+            </key-property>
+        </composite-id>
+        <property name="columnname" type="string">
+            <column name="columnname" length="250" />
+        </property>
+    </class>
+</hibernate-mapping>

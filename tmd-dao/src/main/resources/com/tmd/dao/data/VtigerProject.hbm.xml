@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerProject" table="vtiger_project" catalog="vtiger" optimistic-lock="version">
+        <composite-id name="id" class="com.tmd.dao.data.VtigerProjectId">
+            <key-property name="projectid" type="java.lang.Integer">
+                <column name="projectid" />
+            </key-property>
+            <key-property name="projectname" type="string">
+                <column name="projectname" />
+            </key-property>
+            <key-property name="projectNo" type="string">
+                <column name="project_no" length="100" />
+            </key-property>
+            <key-property name="startdate" type="date">
+                <column name="startdate" length="10" />
+            </key-property>
+            <key-property name="targetenddate" type="date">
+                <column name="targetenddate" length="10" />
+            </key-property>
+            <key-property name="actualenddate" type="date">
+                <column name="actualenddate" length="10" />
+            </key-property>
+            <key-property name="targetbudget" type="string">
+                <column name="targetbudget" />
+            </key-property>
+            <key-property name="projecturl" type="string">
+                <column name="projecturl" />
+            </key-property>
+            <key-property name="projectstatus" type="string">
+                <column name="projectstatus" length="100" />
+            </key-property>
+            <key-property name="projectpriority" type="string">
+                <column name="projectpriority" length="100" />
+            </key-property>
+            <key-property name="projecttype" type="string">
+                <column name="projecttype" length="100" />
+            </key-property>
+            <key-property name="progress" type="string">
+                <column name="progress" length="100" />
+            </key-property>
+            <key-property name="linktoaccountscontacts" type="string">
+                <column name="linktoaccountscontacts" length="100" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

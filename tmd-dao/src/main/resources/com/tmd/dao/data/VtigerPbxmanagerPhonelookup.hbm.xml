@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerPbxmanagerPhonelookup" table="vtiger_pbxmanager_phonelookup" catalog="vtiger" optimistic-lock="version">
+        <composite-id name="id" class="com.tmd.dao.data.VtigerPbxmanagerPhonelookupId">
+            <key-property name="crmid" type="java.lang.Integer">
+                <column name="crmid" />
+            </key-property>
+            <key-property name="setype" type="string">
+                <column name="setype" length="30" />
+            </key-property>
+            <key-property name="fnumber" type="string">
+                <column name="fnumber" length="100" />
+            </key-property>
+            <key-property name="rnumber" type="string">
+                <column name="rnumber" length="100" />
+            </key-property>
+            <key-property name="fieldname" type="string">
+                <column name="fieldname" length="50" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="vtigerCrmentity" class="com.tmd.dao.data.VtigerCrmentity" update="false" insert="false" fetch="select">
+            <column name="crmid" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

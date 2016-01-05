@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerMailscannerRules" table="vtiger_mailscanner_rules" catalog="vtiger" optimistic-lock="version">
+        <id name="ruleid" type="java.lang.Integer">
+            <column name="ruleid" />
+            <generator class="identity" />
+        </id>
+        <property name="scannerid" type="java.lang.Integer">
+            <column name="scannerid" />
+        </property>
+        <property name="fromaddress" type="string">
+            <column name="fromaddress" />
+        </property>
+        <property name="toaddress" type="string">
+            <column name="toaddress" />
+        </property>
+        <property name="subjectop" type="string">
+            <column name="subjectop" length="20" />
+        </property>
+        <property name="subject" type="string">
+            <column name="subject" />
+        </property>
+        <property name="bodyop" type="string">
+            <column name="bodyop" length="20" />
+        </property>
+        <property name="body" type="string">
+            <column name="body" />
+        </property>
+        <property name="matchusing" type="string">
+            <column name="matchusing" length="5" />
+        </property>
+        <property name="sequence" type="java.lang.Integer">
+            <column name="sequence" />
+        </property>
+        <property name="assignedTo" type="java.lang.Integer">
+            <column name="assigned_to" />
+        </property>
+        <property name="cc" type="string">
+            <column name="cc" />
+        </property>
+        <property name="bcc" type="string">
+            <column name="bcc" />
+        </property>
+    </class>
+</hibernate-mapping>

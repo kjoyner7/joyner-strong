@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerAsteriskincomingcalls" table="vtiger_asteriskincomingcalls" catalog="vtiger" optimistic-lock="version">
+        <composite-id name="id" class="com.tmd.dao.data.VtigerAsteriskincomingcallsId">
+            <key-property name="fromNumber" type="string">
+                <column name="from_number" length="50" />
+            </key-property>
+            <key-property name="fromName" type="string">
+                <column name="from_name" length="50" />
+            </key-property>
+            <key-property name="toNumber" type="string">
+                <column name="to_number" length="50" />
+            </key-property>
+            <key-property name="callertype" type="string">
+                <column name="callertype" length="30" />
+            </key-property>
+            <key-property name="flag" type="java.lang.Integer">
+                <column name="flag" />
+            </key-property>
+            <key-property name="timer" type="java.lang.Integer">
+                <column name="timer" />
+            </key-property>
+            <key-property name="refuid" type="string">
+                <column name="refuid" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

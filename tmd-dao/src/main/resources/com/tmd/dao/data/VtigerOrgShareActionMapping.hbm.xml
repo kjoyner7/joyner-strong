@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerOrgShareActionMapping" table="vtiger_org_share_action_mapping" catalog="vtiger" optimistic-lock="version">
+        <id name="shareActionId" type="int">
+            <column name="share_action_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="shareActionName" type="string">
+            <column name="share_action_name" length="200" />
+        </property>
+    </class>
+</hibernate-mapping>

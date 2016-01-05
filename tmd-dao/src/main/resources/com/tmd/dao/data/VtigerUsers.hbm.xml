@@ -1,0 +1,225 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerUsers" table="vtiger_users">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="userName" type="string">
+            <column name="user_name" />
+        </property>
+        <property name="userPassword" type="string">
+            <column name="user_password" length="200" />
+        </property>
+        <property name="userHash" type="string">
+            <column name="user_hash" length="32" />
+        </property>
+        <property name="calColor" type="string">
+            <column name="cal_color" length="25" />
+        </property>
+        <property name="firstName" type="string">
+            <column name="first_name" length="30" />
+        </property>
+        <property name="lastName" type="string">
+            <column name="last_name" length="30" />
+        </property>
+        <property name="reportsToId" type="string">
+            <column name="reports_to_id" length="36" />
+        </property>
+        <property name="isAdmin" type="string">
+            <column name="is_admin" length="3" />
+        </property>
+        <property name="currencyId" type="int">
+            <column name="currency_id" not-null="true" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" length="65535" />
+        </property>
+        <property name="dateEntered" type="timestamp">
+            <column name="date_entered" length="19" not-null="true" />
+        </property>
+        <property name="dateModified" type="timestamp">
+            <column name="date_modified" length="19" not-null="true" />
+        </property>
+        <property name="modifiedUserId" type="string">
+            <column name="modified_user_id" length="36" />
+        </property>
+        <property name="title" type="string">
+            <column name="title" length="50" />
+        </property>
+        <property name="department" type="string">
+            <column name="department" length="50" />
+        </property>
+        <property name="phoneHome" type="string">
+            <column name="phone_home" length="50" />
+        </property>
+        <property name="phoneMobile" type="string">
+            <column name="phone_mobile" length="50" />
+        </property>
+        <property name="phoneWork" type="string">
+            <column name="phone_work" length="50" />
+        </property>
+        <property name="phoneOther" type="string">
+            <column name="phone_other" length="50" />
+        </property>
+        <property name="phoneFax" type="string">
+            <column name="phone_fax" length="50" />
+        </property>
+        <property name="email1" type="string">
+            <column name="email1" length="100" />
+        </property>
+        <property name="email2" type="string">
+            <column name="email2" length="100" />
+        </property>
+        <property name="secondaryemail" type="string">
+            <column name="secondaryemail" length="100" />
+        </property>
+        <property name="status" type="string">
+            <column name="status" length="25" />
+        </property>
+        <property name="signature" type="string">
+            <column name="signature" length="65535" />
+        </property>
+        <property name="addressStreet" type="string">
+            <column name="address_street" length="150" />
+        </property>
+        <property name="addressCity" type="string">
+            <column name="address_city" length="100" />
+        </property>
+        <property name="addressState" type="string">
+            <column name="address_state" length="100" />
+        </property>
+        <property name="addressCountry" type="string">
+            <column name="address_country" length="25" />
+        </property>
+        <property name="addressPostalcode" type="string">
+            <column name="address_postalcode" length="9" />
+        </property>
+        <property name="userPreferences" type="string">
+            <column name="user_preferences" length="65535" />
+        </property>
+        <property name="tz" type="string">
+            <column name="tz" length="30" />
+        </property>
+        <property name="holidays" type="string">
+            <column name="holidays" length="60" />
+        </property>
+        <property name="namedays" type="string">
+            <column name="namedays" length="60" />
+        </property>
+        <property name="workdays" type="string">
+            <column name="workdays" length="30" />
+        </property>
+        <property name="weekstart" type="java.lang.Integer">
+            <column name="weekstart" />
+        </property>
+        <property name="dateFormat" type="string">
+            <column name="date_format" length="200" />
+        </property>
+        <property name="hourFormat" type="string">
+            <column name="hour_format" length="30" />
+        </property>
+        <property name="startHour" type="string">
+            <column name="start_hour" length="30" />
+        </property>
+        <property name="endHour" type="string">
+            <column name="end_hour" length="30" />
+        </property>
+        <property name="activityView" type="string">
+            <column name="activity_view" length="200" />
+        </property>
+        <property name="leadView" type="string">
+            <column name="lead_view" length="200" />
+        </property>
+        <property name="imagename" type="string">
+            <column name="imagename" length="250" />
+        </property>
+        <property name="deleted" type="int">
+            <column name="deleted" not-null="true" />
+        </property>
+        <property name="confirmPassword" type="string">
+            <column name="confirm_password" length="300" />
+        </property>
+        <property name="internalMailer" type="string">
+            <column name="internal_mailer" length="3" not-null="true" />
+        </property>
+        <property name="reminderInterval" type="string">
+            <column name="reminder_interval" length="100" />
+        </property>
+        <property name="reminderNextTime" type="string">
+            <column name="reminder_next_time" length="100" />
+        </property>
+        <property name="cryptType" type="string">
+            <column name="crypt_type" length="20" not-null="true" />
+        </property>
+        <property name="accesskey" type="string">
+            <column name="accesskey" length="36" />
+        </property>
+        <property name="theme" type="string">
+            <column name="theme" length="100" />
+        </property>
+        <property name="language" type="string">
+            <column name="language" length="36" />
+        </property>
+        <property name="timeZone" type="string">
+            <column name="time_zone" length="200" />
+        </property>
+        <property name="currencyGroupingPattern" type="string">
+            <column name="currency_grouping_pattern" length="100" />
+        </property>
+        <property name="currencyDecimalSeparator" type="string">
+            <column name="currency_decimal_separator" length="2" />
+        </property>
+        <property name="currencyGroupingSeparator" type="string">
+            <column name="currency_grouping_separator" length="2" />
+        </property>
+        <property name="currencySymbolPlacement" type="string">
+            <column name="currency_symbol_placement" length="20" />
+        </property>
+        <property name="phoneCrmExtension" type="string">
+            <column name="phone_crm_extension" length="100" />
+        </property>
+        <property name="noOfCurrencyDecimals" type="string">
+            <column name="no_of_currency_decimals" length="2" />
+        </property>
+        <property name="truncateTrailingZeros" type="string">
+            <column name="truncate_trailing_zeros" length="3" />
+        </property>
+        <property name="dayoftheweek" type="string">
+            <column name="dayoftheweek" length="100" />
+        </property>
+        <property name="callduration" type="string">
+            <column name="callduration" length="100" />
+        </property>
+        <property name="othereventduration" type="string">
+            <column name="othereventduration" length="100" />
+        </property>
+        <property name="calendarsharedtype" type="string">
+            <column name="calendarsharedtype" length="100" />
+        </property>
+        <property name="defaultRecordView" type="string">
+            <column name="default_record_view" length="10" />
+        </property>
+        <property name="leftpanelhide" type="string">
+            <column name="leftpanelhide" length="3" />
+        </property>
+        <property name="rowheight" type="string">
+            <column name="rowheight" length="10" />
+        </property>
+        <property name="defaulteventstatus" type="string">
+            <column name="defaulteventstatus" length="50" />
+        </property>
+        <property name="defaultactivitytype" type="string">
+            <column name="defaultactivitytype" length="50" />
+        </property>
+        <property name="hidecompletedevents" type="java.lang.Integer">
+            <column name="hidecompletedevents" />
+        </property>
+        <property name="isOwner" type="string">
+            <column name="is_owner" length="5" />
+        </property>
+    </class>
+</hibernate-mapping>

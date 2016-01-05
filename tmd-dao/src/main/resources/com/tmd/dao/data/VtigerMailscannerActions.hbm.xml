@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerMailscannerActions" table="vtiger_mailscanner_actions" catalog="vtiger" optimistic-lock="version">
+        <id name="actionid" type="java.lang.Integer">
+            <column name="actionid" />
+            <generator class="identity" />
+        </id>
+        <property name="scannerid" type="java.lang.Integer">
+            <column name="scannerid" />
+        </property>
+        <property name="actiontype" type="string">
+            <column name="actiontype" length="10" />
+        </property>
+        <property name="module" type="string">
+            <column name="module" length="30" />
+        </property>
+        <property name="lookup" type="string">
+            <column name="lookup" length="30" />
+        </property>
+        <property name="sequence" type="java.lang.Integer">
+            <column name="sequence" />
+        </property>
+    </class>
+</hibernate-mapping>

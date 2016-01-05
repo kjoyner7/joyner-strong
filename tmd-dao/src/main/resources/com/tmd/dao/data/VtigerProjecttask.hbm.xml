@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerProjecttask" table="vtiger_projecttask" catalog="vtiger" optimistic-lock="version">
+        <id name="projecttaskid" type="int">
+            <column name="projecttaskid" />
+            <generator class="assigned" />
+        </id>
+        <property name="projecttaskname" type="string">
+            <column name="projecttaskname" />
+        </property>
+        <property name="projecttaskNo" type="string">
+            <column name="projecttask_no" length="100" />
+        </property>
+        <property name="projecttasktype" type="string">
+            <column name="projecttasktype" length="100" />
+        </property>
+        <property name="projecttaskpriority" type="string">
+            <column name="projecttaskpriority" length="100" />
+        </property>
+        <property name="projecttaskprogress" type="string">
+            <column name="projecttaskprogress" length="100" />
+        </property>
+        <property name="projecttaskhours" type="string">
+            <column name="projecttaskhours" />
+        </property>
+        <property name="startdate" type="date">
+            <column name="startdate" length="10" />
+        </property>
+        <property name="enddate" type="date">
+            <column name="enddate" length="10" />
+        </property>
+        <property name="projectid" type="string">
+            <column name="projectid" length="100" />
+        </property>
+        <property name="projecttasknumber" type="java.lang.Integer">
+            <column name="projecttasknumber" />
+        </property>
+        <property name="projecttaskstatus" type="string">
+            <column name="projecttaskstatus" length="100" />
+        </property>
+    </class>
+</hibernate-mapping>

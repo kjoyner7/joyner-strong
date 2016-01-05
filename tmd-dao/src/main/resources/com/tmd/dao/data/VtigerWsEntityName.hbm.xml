@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerWsEntityName" table="vtiger_ws_entity_name" catalog="vtiger" optimistic-lock="version">
+        <id name="entityId" type="int">
+            <column name="entity_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="nameFields" type="string">
+            <column name="name_fields" length="50" not-null="true" />
+        </property>
+        <property name="indexField" type="string">
+            <column name="index_field" length="50" not-null="true" />
+        </property>
+        <property name="tableName" type="string">
+            <column name="table_name" length="50" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

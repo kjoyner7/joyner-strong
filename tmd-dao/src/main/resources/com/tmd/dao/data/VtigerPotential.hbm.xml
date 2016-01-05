@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerPotential" table="vtiger_potential" catalog="vtiger" optimistic-lock="version">
+        <id name="potentialid" type="int">
+            <column name="potentialid" />
+            <generator class="assigned" />
+        </id>
+        <property name="potentialNo" type="string">
+            <column name="potential_no" length="100" not-null="true" />
+        </property>
+        <property name="relatedTo" type="java.lang.Integer">
+            <column name="related_to" />
+        </property>
+        <property name="potentialname" type="string">
+            <column name="potentialname" length="120" not-null="true" />
+        </property>
+        <property name="amount" type="big_decimal">
+            <column name="amount" precision="25" scale="8" />
+        </property>
+        <property name="currency" type="string">
+            <column name="currency" length="20" />
+        </property>
+        <property name="closingdate" type="date">
+            <column name="closingdate" length="10" />
+        </property>
+        <property name="typeofrevenue" type="string">
+            <column name="typeofrevenue" length="50" />
+        </property>
+        <property name="nextstep" type="string">
+            <column name="nextstep" length="100" />
+        </property>
+        <property name="private_" type="java.lang.Integer">
+            <column name="private" />
+        </property>
+        <property name="probability" type="big_decimal">
+            <column name="probability" precision="7" scale="3" />
+        </property>
+        <property name="campaignid" type="java.lang.Integer">
+            <column name="campaignid" />
+        </property>
+        <property name="salesStage" type="string">
+            <column name="sales_stage" length="200" />
+        </property>
+        <property name="potentialtype" type="string">
+            <column name="potentialtype" length="200" />
+        </property>
+        <property name="leadsource" type="string">
+            <column name="leadsource" length="200" />
+        </property>
+        <property name="productid" type="java.lang.Integer">
+            <column name="productid" />
+        </property>
+        <property name="productversion" type="string">
+            <column name="productversion" length="50" />
+        </property>
+        <property name="quotationref" type="string">
+            <column name="quotationref" length="50" />
+        </property>
+        <property name="partnercontact" type="string">
+            <column name="partnercontact" length="50" />
+        </property>
+        <property name="remarks" type="string">
+            <column name="remarks" length="50" />
+        </property>
+        <property name="runtimefee" type="java.lang.Integer">
+            <column name="runtimefee" />
+        </property>
+        <property name="followupdate" type="date">
+            <column name="followupdate" length="10" />
+        </property>
+        <property name="evaluationstatus" type="string">
+            <column name="evaluationstatus" length="50" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" length="65535" />
+        </property>
+        <property name="forecastcategory" type="java.lang.Integer">
+            <column name="forecastcategory" />
+        </property>
+        <property name="outcomeanalysis" type="java.lang.Integer">
+            <column name="outcomeanalysis" />
+        </property>
+        <property name="forecastAmount" type="big_decimal">
+            <column name="forecast_amount" precision="25" scale="8" />
+        </property>
+        <property name="isconvertedfromlead" type="string">
+            <column name="isconvertedfromlead" length="3" />
+        </property>
+        <property name="contactId" type="java.lang.Integer">
+            <column name="contact_id" />
+        </property>
+    </class>
+</hibernate-mapping>

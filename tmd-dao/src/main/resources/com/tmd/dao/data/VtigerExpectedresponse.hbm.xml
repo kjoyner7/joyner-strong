@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerExpectedresponse" table="vtiger_expectedresponse" catalog="vtiger" optimistic-lock="version">
+        <id name="expectedresponseid" type="java.lang.Integer">
+            <column name="expectedresponseid" />
+            <generator class="identity" />
+        </id>
+        <property name="expectedresponse" type="string">
+            <column name="expectedresponse" length="200" not-null="true" unique="true" />
+        </property>
+        <property name="presence" type="int">
+            <column name="presence" not-null="true" />
+        </property>
+        <property name="picklistValueid" type="int">
+            <column name="picklist_valueid" not-null="true" />
+        </property>
+        <property name="sortorderid" type="java.lang.Integer">
+            <column name="sortorderid" />
+        </property>
+    </class>
+</hibernate-mapping>

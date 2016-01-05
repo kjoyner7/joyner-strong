@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerPotstagehistory" table="vtiger_potstagehistory" catalog="vtiger" optimistic-lock="version">
+        <id name="historyid" type="java.lang.Integer">
+            <column name="historyid" />
+            <generator class="identity" />
+        </id>
+        <property name="potentialid" type="int">
+            <column name="potentialid" not-null="true" />
+        </property>
+        <property name="amount" type="java.lang.Long">
+            <column name="amount" precision="10" scale="0" />
+        </property>
+        <property name="stage" type="string">
+            <column name="stage" length="100" />
+        </property>
+        <property name="probability" type="big_decimal">
+            <column name="probability" precision="7" scale="3" />
+        </property>
+        <property name="expectedrevenue" type="java.lang.Long">
+            <column name="expectedrevenue" precision="10" scale="0" />
+        </property>
+        <property name="closedate" type="date">
+            <column name="closedate" length="10" />
+        </property>
+        <property name="lastmodified" type="timestamp">
+            <column name="lastmodified" length="19" />
+        </property>
+    </class>
+</hibernate-mapping>

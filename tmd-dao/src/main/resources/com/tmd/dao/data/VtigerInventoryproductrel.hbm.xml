@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerInventoryproductrel" table="vtiger_inventoryproductrel" catalog="vtiger" optimistic-lock="version">
+        <id name="lineitemId" type="java.lang.Integer">
+            <column name="lineitem_id" />
+            <generator class="identity" />
+        </id>
+        <property name="id" type="java.lang.Integer">
+            <column name="id" />
+        </property>
+        <property name="productid" type="java.lang.Integer">
+            <column name="productid" />
+        </property>
+        <property name="sequenceNo" type="java.lang.Integer">
+            <column name="sequence_no" />
+        </property>
+        <property name="quantity" type="big_decimal">
+            <column name="quantity" precision="25" scale="3" />
+        </property>
+        <property name="listprice" type="big_decimal">
+            <column name="listprice" precision="27" scale="8" />
+        </property>
+        <property name="discountPercent" type="big_decimal">
+            <column name="discount_percent" precision="7" scale="3" />
+        </property>
+        <property name="discountAmount" type="big_decimal">
+            <column name="discount_amount" precision="27" scale="8" />
+        </property>
+        <property name="comment" type="string">
+            <column name="comment" length="500" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" length="65535" />
+        </property>
+        <property name="incrementondel" type="int">
+            <column name="incrementondel" not-null="true" />
+        </property>
+        <property name="tax1" type="big_decimal">
+            <column name="tax1" precision="7" scale="3" />
+        </property>
+        <property name="tax2" type="big_decimal">
+            <column name="tax2" precision="7" scale="3" />
+        </property>
+        <property name="tax3" type="big_decimal">
+            <column name="tax3" precision="7" scale="3" />
+        </property>
+    </class>
+</hibernate-mapping>

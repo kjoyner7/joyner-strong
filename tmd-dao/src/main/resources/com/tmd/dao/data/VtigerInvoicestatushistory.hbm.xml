@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerInvoicestatushistory" table="vtiger_invoicestatushistory" catalog="vtiger" optimistic-lock="version">
+        <id name="historyid" type="java.lang.Integer">
+            <column name="historyid" />
+            <generator class="identity" />
+        </id>
+        <property name="invoiceid" type="int">
+            <column name="invoiceid" not-null="true" />
+        </property>
+        <property name="accountname" type="string">
+            <column name="accountname" length="100" />
+        </property>
+        <property name="total" type="java.lang.Long">
+            <column name="total" precision="10" scale="0" />
+        </property>
+        <property name="invoicestatus" type="string">
+            <column name="invoicestatus" length="200" />
+        </property>
+        <property name="lastmodified" type="timestamp">
+            <column name="lastmodified" length="19" />
+        </property>
+    </class>
+</hibernate-mapping>

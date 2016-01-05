@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerInvoiceshipads" table="vtiger_invoiceshipads" catalog="vtiger" optimistic-lock="version">
+        <id name="invoiceshipaddressid" type="int">
+            <column name="invoiceshipaddressid" />
+            <generator class="assigned" />
+        </id>
+        <property name="shipCity" type="string">
+            <column name="ship_city" length="30" />
+        </property>
+        <property name="shipCode" type="string">
+            <column name="ship_code" length="30" />
+        </property>
+        <property name="shipCountry" type="string">
+            <column name="ship_country" length="30" />
+        </property>
+        <property name="shipState" type="string">
+            <column name="ship_state" length="30" />
+        </property>
+        <property name="shipStreet" type="string">
+            <column name="ship_street" length="250" />
+        </property>
+        <property name="shipPobox" type="string">
+            <column name="ship_pobox" length="30" />
+        </property>
+    </class>
+</hibernate-mapping>

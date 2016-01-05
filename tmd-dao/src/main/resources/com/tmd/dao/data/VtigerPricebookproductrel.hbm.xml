@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerPricebookproductrel" table="vtiger_pricebookproductrel" catalog="vtiger" optimistic-lock="version">
+        <composite-id name="id" class="com.tmd.dao.data.VtigerPricebookproductrelId">
+            <key-property name="pricebookid" type="int">
+                <column name="pricebookid" />
+            </key-property>
+            <key-property name="productid" type="int">
+                <column name="productid" />
+            </key-property>
+        </composite-id>
+        <property name="listprice" type="big_decimal">
+            <column name="listprice" precision="27" scale="8" />
+        </property>
+        <property name="usedcurrency" type="int">
+            <column name="usedcurrency" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

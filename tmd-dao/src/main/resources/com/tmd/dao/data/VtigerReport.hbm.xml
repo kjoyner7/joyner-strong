@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerReport" table="vtiger_report" catalog="vtiger" optimistic-lock="version">
+        <id name="reportid" type="int">
+            <column name="reportid" />
+            <generator class="assigned" />
+        </id>
+        <property name="folderid" type="int">
+            <column name="folderid" not-null="true" />
+        </property>
+        <property name="reportname" type="string">
+            <column name="reportname" length="100" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" length="250" />
+        </property>
+        <property name="reporttype" type="string">
+            <column name="reporttype" length="50" />
+        </property>
+        <property name="queryid" type="int">
+            <column name="queryid" not-null="true" />
+        </property>
+        <property name="state" type="string">
+            <column name="state" length="50" />
+        </property>
+        <property name="customizable" type="java.lang.Integer">
+            <column name="customizable" />
+        </property>
+        <property name="category" type="java.lang.Integer">
+            <column name="category" />
+        </property>
+        <property name="owner" type="java.lang.Integer">
+            <column name="owner" />
+        </property>
+        <property name="sharingtype" type="string">
+            <column name="sharingtype" length="200" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerModuleDashboardWidgets" table="vtiger_module_dashboard_widgets" catalog="vtiger" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="linkid" type="java.lang.Integer">
+            <column name="linkid" />
+        </property>
+        <property name="userid" type="java.lang.Integer">
+            <column name="userid" />
+        </property>
+        <property name="filterid" type="java.lang.Integer">
+            <column name="filterid" />
+        </property>
+        <property name="title" type="string">
+            <column name="title" length="100" />
+        </property>
+        <property name="data" type="string">
+            <column name="data" length="65535" />
+        </property>
+        <property name="position" type="string">
+            <column name="position" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>

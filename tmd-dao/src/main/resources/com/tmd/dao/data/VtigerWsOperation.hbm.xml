@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerWsOperation" table="vtiger_ws_operation" catalog="vtiger" optimistic-lock="version">
+        <id name="operationid" type="java.lang.Integer">
+            <column name="operationid" />
+            <generator class="identity" />
+        </id>
+        <property name="name" type="string">
+            <column name="name" length="128" not-null="true" />
+        </property>
+        <property name="handlerPath" type="string">
+            <column name="handler_path" not-null="true" />
+        </property>
+        <property name="handlerMethod" type="string">
+            <column name="handler_method" length="64" not-null="true" />
+        </property>
+        <property name="type" type="string">
+            <column name="type" length="8" not-null="true" />
+        </property>
+        <property name="prelogin" type="int">
+            <column name="prelogin" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerLeaddetails" table="vtiger_leaddetails" catalog="vtiger" optimistic-lock="version">
+        <id name="leadid" type="int">
+            <column name="leadid" />
+            <generator class="assigned" />
+        </id>
+        <property name="leadNo" type="string">
+            <column name="lead_no" length="100" not-null="true" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="100" />
+        </property>
+        <property name="interest" type="string">
+            <column name="interest" length="50" />
+        </property>
+        <property name="firstname" type="string">
+            <column name="firstname" length="40" />
+        </property>
+        <property name="salutation" type="string">
+            <column name="salutation" length="200" />
+        </property>
+        <property name="lastname" type="string">
+            <column name="lastname" length="80" not-null="true" />
+        </property>
+        <property name="company" type="string">
+            <column name="company" length="100" not-null="true" />
+        </property>
+        <property name="annualrevenue" type="big_decimal">
+            <column name="annualrevenue" precision="25" scale="8" />
+        </property>
+        <property name="industry" type="string">
+            <column name="industry" length="200" />
+        </property>
+        <property name="campaign" type="string">
+            <column name="campaign" length="30" />
+        </property>
+        <property name="rating" type="string">
+            <column name="rating" length="200" />
+        </property>
+        <property name="leadstatus" type="string">
+            <column name="leadstatus" length="50" />
+        </property>
+        <property name="leadsource" type="string">
+            <column name="leadsource" length="200" />
+        </property>
+        <property name="converted" type="java.lang.Integer">
+            <column name="converted" />
+        </property>
+        <property name="designation" type="string">
+            <column name="designation" length="50" />
+        </property>
+        <property name="licencekeystatus" type="string">
+            <column name="licencekeystatus" length="50" />
+        </property>
+        <property name="space" type="string">
+            <column name="space" length="250" />
+        </property>
+        <property name="comments" type="string">
+            <column name="comments" length="65535" />
+        </property>
+        <property name="priority" type="string">
+            <column name="priority" length="50" />
+        </property>
+        <property name="demorequest" type="string">
+            <column name="demorequest" length="50" />
+        </property>
+        <property name="partnercontact" type="string">
+            <column name="partnercontact" length="50" />
+        </property>
+        <property name="productversion" type="string">
+            <column name="productversion" length="20" />
+        </property>
+        <property name="product" type="string">
+            <column name="product" length="50" />
+        </property>
+        <property name="maildate" type="date">
+            <column name="maildate" length="10" />
+        </property>
+        <property name="nextstepdate" type="date">
+            <column name="nextstepdate" length="10" />
+        </property>
+        <property name="fundingsituation" type="string">
+            <column name="fundingsituation" length="50" />
+        </property>
+        <property name="purpose" type="string">
+            <column name="purpose" length="50" />
+        </property>
+        <property name="evaluationstatus" type="string">
+            <column name="evaluationstatus" length="50" />
+        </property>
+        <property name="transferdate" type="date">
+            <column name="transferdate" length="10" />
+        </property>
+        <property name="revenuetype" type="string">
+            <column name="revenuetype" length="50" />
+        </property>
+        <property name="noofemployees" type="java.lang.Integer">
+            <column name="noofemployees" />
+        </property>
+        <property name="secondaryemail" type="string">
+            <column name="secondaryemail" length="100" />
+        </property>
+        <property name="assignleadchk" type="java.lang.Integer">
+            <column name="assignleadchk" />
+        </property>
+        <property name="emailoptout" type="string">
+            <column name="emailoptout" length="3" />
+        </property>
+    </class>
+</hibernate-mapping>

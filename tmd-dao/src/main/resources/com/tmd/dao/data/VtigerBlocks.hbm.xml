@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerBlocks" table="vtiger_blocks" catalog="vtiger" optimistic-lock="version">
+        <id name="blockid" type="int">
+            <column name="blockid" />
+            <generator class="assigned" />
+        </id>
+        <property name="tabid" type="int">
+            <column name="tabid" not-null="true" />
+        </property>
+        <property name="blocklabel" type="string">
+            <column name="blocklabel" length="100" not-null="true" />
+        </property>
+        <property name="sequence" type="java.lang.Integer">
+            <column name="sequence" />
+        </property>
+        <property name="showTitle" type="java.lang.Integer">
+            <column name="show_title" />
+        </property>
+        <property name="visible" type="int">
+            <column name="visible" not-null="true" />
+        </property>
+        <property name="createView" type="int">
+            <column name="create_view" not-null="true" />
+        </property>
+        <property name="editView" type="int">
+            <column name="edit_view" not-null="true" />
+        </property>
+        <property name="detailView" type="int">
+            <column name="detail_view" not-null="true" />
+        </property>
+        <property name="displayStatus" type="int">
+            <column name="display_status" not-null="true" />
+        </property>
+        <property name="iscustom" type="int">
+            <column name="iscustom" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

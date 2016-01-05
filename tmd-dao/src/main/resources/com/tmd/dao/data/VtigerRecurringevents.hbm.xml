@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerRecurringevents" table="vtiger_recurringevents" catalog="vtiger" optimistic-lock="version">
+        <id name="recurringid" type="java.lang.Integer">
+            <column name="recurringid" />
+            <generator class="identity" />
+        </id>
+        <property name="activityid" type="int">
+            <column name="activityid" not-null="true" />
+        </property>
+        <property name="recurringdate" type="date">
+            <column name="recurringdate" length="10" />
+        </property>
+        <property name="recurringtype" type="string">
+            <column name="recurringtype" length="30" />
+        </property>
+        <property name="recurringfreq" type="java.lang.Integer">
+            <column name="recurringfreq" />
+        </property>
+        <property name="recurringinfo" type="string">
+            <column name="recurringinfo" length="50" />
+        </property>
+        <property name="recurringenddate" type="date">
+            <column name="recurringenddate" length="10" />
+        </property>
+    </class>
+</hibernate-mapping>

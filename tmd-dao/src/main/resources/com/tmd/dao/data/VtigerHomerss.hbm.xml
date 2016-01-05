@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerHomerss" table="vtiger_homerss" catalog="vtiger" optimistic-lock="version">
+        <id name="stuffid" type="int">
+            <column name="stuffid" />
+            <generator class="assigned" />
+        </id>
+        <property name="url" type="string">
+            <column name="url" length="100" />
+        </property>
+        <property name="maxentries" type="int">
+            <column name="maxentries" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerTmpReadUserRelSharingPer" table="vtiger_tmp_read_user_rel_sharing_per" catalog="vtiger" optimistic-lock="version">
+        <composite-id name="id" class="com.tmd.dao.data.VtigerTmpReadUserRelSharingPerId">
+            <key-property name="userid" type="int">
+                <column name="userid" />
+            </key-property>
+            <key-property name="tabid" type="int">
+                <column name="tabid" />
+            </key-property>
+            <key-property name="relatedtabid" type="int">
+                <column name="relatedtabid" />
+            </key-property>
+            <key-property name="shareduserid" type="int">
+                <column name="shareduserid" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerImportQueue" table="vtiger_import_queue" catalog="vtiger" optimistic-lock="version">
+        <id name="importid" type="int">
+            <column name="importid" />
+            <generator class="assigned" />
+        </id>
+        <property name="userid" type="int">
+            <column name="userid" not-null="true" />
+        </property>
+        <property name="tabid" type="int">
+            <column name="tabid" not-null="true" />
+        </property>
+        <property name="fieldMapping" type="string">
+            <column name="field_mapping" length="65535" />
+        </property>
+        <property name="defaultValues" type="string">
+            <column name="default_values" length="65535" />
+        </property>
+        <property name="mergeType" type="java.lang.Integer">
+            <column name="merge_type" />
+        </property>
+        <property name="mergeFields" type="string">
+            <column name="merge_fields" length="65535" />
+        </property>
+        <property name="status" type="java.lang.Integer">
+            <column name="status" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory name="tmdSessionFactory">
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    	<property name="hibernate.connection.datasource">java:/comp/env/jdbc/vtiger</property>
+        <property name="hibernate.default_schema">vtiger</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property> 
+        
+        <mapping resource="com/tmd/dao/data/TmdActiveProcedures.hbm.xml" />
+        <mapping resource="com/tmd/dao/data/TmdEmployeeToOrganization.hbm.xml" />
+        <mapping resource="com/tmd/dao/data/TmdEmployeeToStore.hbm.xml" />
+        <mapping resource="com/tmd/dao/data/TmdEndOfShift.hbm.xml"/>
+        <mapping resource="com/tmd/dao/data/TmdOrganizations.hbm.xml" />
+        <mapping resource="com/tmd/dao/data/TmdProcedures.hbm.xml" />
+        <mapping resource="com/tmd/dao/data/TmdProceduresHistory.hbm.xml" />
+        <mapping resource="com/tmd/dao/data/TmdStore.hbm.xml" />
+        <mapping resource="com/tmd/dao/data/VtigerRole.hbm.xml" />
+        <mapping resource="com/tmd/dao/data/VtigerUser2role.hbm.xml" />
+        <mapping resource="com/tmd/dao/data/VtigerUsers.hbm.xml" />
+    </session-factory>
+</hibernate-configuration>

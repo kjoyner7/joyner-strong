@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerGroup2grouprel" table="vtiger_group2grouprel" catalog="vtiger" optimistic-lock="version">
+        <composite-id name="id" class="com.tmd.dao.data.VtigerGroup2grouprelId">
+            <key-property name="groupid" type="int">
+                <column name="groupid" />
+            </key-property>
+            <key-property name="containsgroupid" type="int">
+                <column name="containsgroupid" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

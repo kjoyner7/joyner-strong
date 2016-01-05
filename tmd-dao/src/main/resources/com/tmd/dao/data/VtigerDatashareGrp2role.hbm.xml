@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerDatashareGrp2role" table="vtiger_datashare_grp2role" catalog="vtiger" optimistic-lock="version">
+        <id name="shareid" type="int">
+            <column name="shareid" />
+            <generator class="assigned" />
+        </id>
+        <property name="shareGroupid" type="java.lang.Integer">
+            <column name="share_groupid" />
+        </property>
+        <property name="toRoleid" type="string">
+            <column name="to_roleid" />
+        </property>
+        <property name="permission" type="java.lang.Integer">
+            <column name="permission" />
+        </property>
+    </class>
+</hibernate-mapping>

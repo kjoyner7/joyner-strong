@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerInventorytaxinfo" table="vtiger_inventorytaxinfo" catalog="vtiger" optimistic-lock="version">
+        <id name="taxid" type="int">
+            <column name="taxid" />
+            <generator class="assigned" />
+        </id>
+        <property name="taxname" type="string">
+            <column name="taxname" length="50" />
+        </property>
+        <property name="taxlabel" type="string">
+            <column name="taxlabel" length="50" />
+        </property>
+        <property name="percentage" type="big_decimal">
+            <column name="percentage" precision="7" scale="3" />
+        </property>
+        <property name="deleted" type="java.lang.Integer">
+            <column name="deleted" />
+        </property>
+    </class>
+</hibernate-mapping>

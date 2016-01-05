@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerMailscannerFolders" table="vtiger_mailscanner_folders" catalog="vtiger" optimistic-lock="version">
+        <id name="folderid" type="java.lang.Integer">
+            <column name="folderid" />
+            <generator class="identity" />
+        </id>
+        <property name="scannerid" type="java.lang.Integer">
+            <column name="scannerid" />
+        </property>
+        <property name="foldername" type="string">
+            <column name="foldername" />
+        </property>
+        <property name="lastscan" type="string">
+            <column name="lastscan" length="30" />
+        </property>
+        <property name="rescan" type="java.lang.Integer">
+            <column name="rescan" />
+        </property>
+        <property name="enabled" type="java.lang.Integer">
+            <column name="enabled" />
+        </property>
+    </class>
+</hibernate-mapping>

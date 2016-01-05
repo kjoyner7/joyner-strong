@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerInventorynotification" table="vtiger_inventorynotification" catalog="vtiger" optimistic-lock="version">
+        <id name="notificationid" type="java.lang.Integer">
+            <column name="notificationid" />
+            <generator class="identity" />
+        </id>
+        <property name="notificationname" type="string">
+            <column name="notificationname" length="200" />
+        </property>
+        <property name="notificationsubject" type="string">
+            <column name="notificationsubject" length="200" />
+        </property>
+        <property name="notificationbody" type="string">
+            <column name="notificationbody" length="65535" />
+        </property>
+        <property name="label" type="string">
+            <column name="label" length="50" />
+        </property>
+        <property name="status" type="string">
+            <column name="status" length="30" />
+        </property>
+    </class>
+</hibernate-mapping>

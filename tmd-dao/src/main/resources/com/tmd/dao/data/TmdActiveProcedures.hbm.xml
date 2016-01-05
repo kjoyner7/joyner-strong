@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="com.tmd.dao.data.TmdActiveProcedures" table="tmd_active_procedures">
+        <id name="tmdActiveProceduresUid" type="java.lang.Integer">
+            <column name="tmd_active_procedures_uid" />
+            <generator class="identity" />
+        </id>
+        <property name="vtigerRoleid" type="string">
+            <column name="vtiger_roleid" length="255" />
+        </property>
+        <property name="vtigerUsersId" type="java.lang.Integer">
+            <column name="vtiger_users_id" length="11" />
+        </property>
+         <property name="tmdOrganizationUid" type="java.lang.Integer">
+            <column name="tmd_organization_uid" />
+        </property>
+        <property name="tmdStoreUid" type="java.lang.Integer">
+        	<column name="tmd_store_uid"/>
+        </property>
+        <property name="procedures" type="string">
+            <column name="procedures" length="512" />
+        </property>
+        <property name="tmdTasksUid" type="java.lang.Integer">
+        	<column name="tmd_tasks_uid"/>
+        </property>
+        <property name="completed" type="java.lang.Integer">
+        	<column name="completed" length="2" />
+        </property>
+        <property name="repeatInterval" type="java.lang.Integer">
+        	<column name="repeat_interval" length="11" />
+        </property>
+        <property name="startTime" type="timestamp">
+            <column name="start_time" length="19"  />
+        </property>
+        <property name="completedTime" type="timestamp">
+            <column name="completed_time" length="19"/>
+        </property>
+    </class>
+</hibernate-mapping>

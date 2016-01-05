@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerAsteriskincomingevents" table="vtiger_asteriskincomingevents" catalog="vtiger" optimistic-lock="version">
+        <id name="uid" type="string">
+            <column name="uid" />
+            <generator class="assigned" />
+        </id>
+        <property name="channel" type="string">
+            <column name="channel" length="100" />
+        </property>
+        <property name="fromNumber" type="java.lang.Long">
+            <column name="from_number" />
+        </property>
+        <property name="fromName" type="string">
+            <column name="from_name" length="100" />
+        </property>
+        <property name="toNumber" type="java.lang.Long">
+            <column name="to_number" />
+        </property>
+        <property name="callertype" type="string">
+            <column name="callertype" length="100" />
+        </property>
+        <property name="timer" type="java.lang.Integer">
+            <column name="timer" />
+        </property>
+        <property name="flag" type="string">
+            <column name="flag" length="3" />
+        </property>
+        <property name="pbxrecordid" type="java.lang.Integer">
+            <column name="pbxrecordid" />
+        </property>
+        <property name="relcrmid" type="java.lang.Integer">
+            <column name="relcrmid" />
+        </property>
+    </class>
+</hibernate-mapping>

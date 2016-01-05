@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerReportgroupbycolumn" table="vtiger_reportgroupbycolumn" catalog="vtiger" optimistic-lock="version">
+        <composite-id name="id" class="com.tmd.dao.data.VtigerReportgroupbycolumnId">
+            <key-property name="reportid" type="java.lang.Integer">
+                <column name="reportid" />
+            </key-property>
+            <key-property name="sortid" type="java.lang.Integer">
+                <column name="sortid" />
+            </key-property>
+            <key-property name="sortcolname" type="string">
+                <column name="sortcolname" length="250" />
+            </key-property>
+            <key-property name="dategroupbycriteria" type="string">
+                <column name="dategroupbycriteria" length="250" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

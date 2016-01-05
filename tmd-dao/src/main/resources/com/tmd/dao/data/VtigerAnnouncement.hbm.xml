@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerAnnouncement" table="vtiger_announcement" catalog="vtiger" optimistic-lock="version">
+        <id name="creatorid" type="int">
+            <column name="creatorid" />
+            <generator class="assigned" />
+        </id>
+        <property name="announcement" type="string">
+            <column name="announcement" length="65535" />
+        </property>
+        <property name="title" type="string">
+            <column name="title" />
+        </property>
+        <property name="time" type="timestamp">
+            <column name="time" length="19" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

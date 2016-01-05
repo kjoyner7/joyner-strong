@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerMailAccounts" table="vtiger_mail_accounts" catalog="vtiger" optimistic-lock="version">
+        <id name="accountId" type="int">
+            <column name="account_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="userId" type="int">
+            <column name="user_id" not-null="true" />
+        </property>
+        <property name="displayName" type="string">
+            <column name="display_name" length="50" />
+        </property>
+        <property name="mailId" type="string">
+            <column name="mail_id" length="50" />
+        </property>
+        <property name="accountName" type="string">
+            <column name="account_name" length="50" />
+        </property>
+        <property name="mailProtocol" type="string">
+            <column name="mail_protocol" length="20" />
+        </property>
+        <property name="mailUsername" type="string">
+            <column name="mail_username" length="50" not-null="true" />
+        </property>
+        <property name="mailPassword" type="string">
+            <column name="mail_password" length="250" not-null="true" />
+        </property>
+        <property name="mailServername" type="string">
+            <column name="mail_servername" length="50" />
+        </property>
+        <property name="boxRefresh" type="java.lang.Integer">
+            <column name="box_refresh" />
+        </property>
+        <property name="mailsPerPage" type="java.lang.Integer">
+            <column name="mails_per_page" />
+        </property>
+        <property name="ssltype" type="string">
+            <column name="ssltype" length="50" />
+        </property>
+        <property name="sslmeth" type="string">
+            <column name="sslmeth" length="50" />
+        </property>
+        <property name="intMailer" type="java.lang.Integer">
+            <column name="int_mailer" />
+        </property>
+        <property name="status" type="string">
+            <column name="status" length="10" />
+        </property>
+        <property name="setDefault" type="java.lang.Integer">
+            <column name="set_default" />
+        </property>
+        <property name="sentFolder" type="string">
+            <column name="sent_folder" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerVendor" table="vtiger_vendor" catalog="vtiger" optimistic-lock="version">
+        <id name="vendorid" type="int">
+            <column name="vendorid" />
+            <generator class="assigned" />
+        </id>
+        <property name="vendorNo" type="string">
+            <column name="vendor_no" length="100" not-null="true" />
+        </property>
+        <property name="vendorname" type="string">
+            <column name="vendorname" length="100" />
+        </property>
+        <property name="phone" type="string">
+            <column name="phone" length="100" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="100" />
+        </property>
+        <property name="website" type="string">
+            <column name="website" length="100" />
+        </property>
+        <property name="glacct" type="string">
+            <column name="glacct" length="200" />
+        </property>
+        <property name="category" type="string">
+            <column name="category" length="50" />
+        </property>
+        <property name="street" type="string">
+            <column name="street" length="65535" />
+        </property>
+        <property name="city" type="string">
+            <column name="city" length="30" />
+        </property>
+        <property name="state" type="string">
+            <column name="state" length="30" />
+        </property>
+        <property name="pobox" type="string">
+            <column name="pobox" length="30" />
+        </property>
+        <property name="postalcode" type="string">
+            <column name="postalcode" length="100" />
+        </property>
+        <property name="country" type="string">
+            <column name="country" length="100" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" length="65535" />
+        </property>
+    </class>
+</hibernate-mapping>

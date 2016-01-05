@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerRelatedlistsRb" table="vtiger_relatedlists_rb" catalog="vtiger" optimistic-lock="version">
+        <composite-id name="id" class="com.tmd.dao.data.VtigerRelatedlistsRbId">
+            <key-property name="entityid" type="java.lang.Integer">
+                <column name="entityid" />
+            </key-property>
+            <key-property name="action" type="string">
+                <column name="action" length="50" />
+            </key-property>
+            <key-property name="relTable" type="string">
+                <column name="rel_table" length="200" />
+            </key-property>
+            <key-property name="relColumn" type="string">
+                <column name="rel_column" length="200" />
+            </key-property>
+            <key-property name="refColumn" type="string">
+                <column name="ref_column" length="200" />
+            </key-property>
+            <key-property name="relatedCrmIds" type="string">
+                <column name="related_crm_ids" length="65535" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerSelectquery" table="vtiger_selectquery" catalog="vtiger" optimistic-lock="version">
+        <id name="queryid" type="int">
+            <column name="queryid" />
+            <generator class="assigned" />
+        </id>
+        <property name="startindex" type="java.lang.Integer">
+            <column name="startindex" />
+        </property>
+        <property name="numofobjects" type="java.lang.Integer">
+            <column name="numofobjects" />
+        </property>
+    </class>
+</hibernate-mapping>

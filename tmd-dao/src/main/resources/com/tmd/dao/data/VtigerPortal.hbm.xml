@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerPortal" table="vtiger_portal" catalog="vtiger" optimistic-lock="version">
+        <id name="portalid" type="int">
+            <column name="portalid" />
+            <generator class="assigned" />
+        </id>
+        <property name="portalname" type="string">
+            <column name="portalname" length="200" not-null="true" />
+        </property>
+        <property name="portalurl" type="string">
+            <column name="portalurl" not-null="true" />
+        </property>
+        <property name="sequence" type="int">
+            <column name="sequence" not-null="true" />
+        </property>
+        <property name="setdefault" type="int">
+            <column name="setdefault" not-null="true" />
+        </property>
+        <property name="createdtime" type="timestamp">
+            <column name="createdtime" length="19" />
+        </property>
+    </class>
+</hibernate-mapping>

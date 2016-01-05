@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerService" table="vtiger_service" catalog="vtiger" optimistic-lock="version">
+        <id name="serviceid" type="int">
+            <column name="serviceid" />
+            <generator class="foreign">
+                <param name="property">vtigerCrmentity</param>
+            </generator>
+        </id>
+        <one-to-one name="vtigerCrmentity" class="com.tmd.dao.data.VtigerCrmentity" constrained="true"></one-to-one>
+        <property name="serviceNo" type="string">
+            <column name="service_no" length="100" not-null="true" />
+        </property>
+        <property name="servicename" type="string">
+            <column name="servicename" length="50" not-null="true" />
+        </property>
+        <property name="servicecategory" type="string">
+            <column name="servicecategory" length="200" />
+        </property>
+        <property name="qtyPerUnit" type="big_decimal">
+            <column name="qty_per_unit" precision="11" />
+        </property>
+        <property name="unitPrice" type="big_decimal">
+            <column name="unit_price" precision="25" scale="8" />
+        </property>
+        <property name="salesStartDate" type="date">
+            <column name="sales_start_date" length="10" />
+        </property>
+        <property name="salesEndDate" type="date">
+            <column name="sales_end_date" length="10" />
+        </property>
+        <property name="startDate" type="date">
+            <column name="start_date" length="10" />
+        </property>
+        <property name="expiryDate" type="date">
+            <column name="expiry_date" length="10" />
+        </property>
+        <property name="discontinued" type="int">
+            <column name="discontinued" not-null="true" />
+        </property>
+        <property name="serviceUsageunit" type="string">
+            <column name="service_usageunit" length="200" />
+        </property>
+        <property name="website" type="string">
+            <column name="website" length="100" />
+        </property>
+        <property name="taxclass" type="string">
+            <column name="taxclass" length="200" />
+        </property>
+        <property name="currencyId" type="int">
+            <column name="currency_id" not-null="true" />
+        </property>
+        <property name="commissionrate" type="big_decimal">
+            <column name="commissionrate" precision="7" scale="3" />
+        </property>
+    </class>
+</hibernate-mapping>

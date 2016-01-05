@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerActivity" table="vtiger_activity" catalog="vtiger" optimistic-lock="version">
+        <id name="activityid" type="int">
+            <column name="activityid" />
+            <generator class="assigned" />
+        </id>
+        <property name="subject" type="string">
+            <column name="subject" length="100" not-null="true" />
+        </property>
+        <property name="semodule" type="string">
+            <column name="semodule" length="20" />
+        </property>
+        <property name="activitytype" type="string">
+            <column name="activitytype" length="200" not-null="true" />
+        </property>
+        <property name="dateStart" type="date">
+            <column name="date_start" length="10" not-null="true" />
+        </property>
+        <property name="dueDate" type="date">
+            <column name="due_date" length="10" />
+        </property>
+        <property name="timeStart" type="string">
+            <column name="time_start" length="50" />
+        </property>
+        <property name="timeEnd" type="string">
+            <column name="time_end" length="50" />
+        </property>
+        <property name="sendnotification" type="string">
+            <column name="sendnotification" length="3" not-null="true" />
+        </property>
+        <property name="durationHours" type="string">
+            <column name="duration_hours" length="200" />
+        </property>
+        <property name="durationMinutes" type="string">
+            <column name="duration_minutes" length="200" />
+        </property>
+        <property name="status" type="string">
+            <column name="status" length="200" />
+        </property>
+        <property name="eventstatus" type="string">
+            <column name="eventstatus" length="200" />
+        </property>
+        <property name="priority" type="string">
+            <column name="priority" length="200" />
+        </property>
+        <property name="location" type="string">
+            <column name="location" length="150" />
+        </property>
+        <property name="notime" type="string">
+            <column name="notime" length="3" not-null="true" />
+        </property>
+        <property name="visibility" type="string">
+            <column name="visibility" length="50" not-null="true" />
+        </property>
+        <property name="recurringtype" type="string">
+            <column name="recurringtype" length="200" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerOrganizationdetails" table="vtiger_organizationdetails" catalog="vtiger" optimistic-lock="version">
+        <id name="organizationId" type="int">
+            <column name="organization_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="organizationname" type="string">
+            <column name="organizationname" length="60" />
+        </property>
+        <property name="address" type="string">
+            <column name="address" length="150" />
+        </property>
+        <property name="city" type="string">
+            <column name="city" length="100" />
+        </property>
+        <property name="state" type="string">
+            <column name="state" length="100" />
+        </property>
+        <property name="country" type="string">
+            <column name="country" length="100" />
+        </property>
+        <property name="code" type="string">
+            <column name="code" length="30" />
+        </property>
+        <property name="phone" type="string">
+            <column name="phone" length="30" />
+        </property>
+        <property name="fax" type="string">
+            <column name="fax" length="30" />
+        </property>
+        <property name="website" type="string">
+            <column name="website" length="100" />
+        </property>
+        <property name="logoname" type="string">
+            <column name="logoname" length="50" />
+        </property>
+        <property name="logo" type="string">
+            <column name="logo" length="65535" />
+        </property>
+        <property name="vatid" type="string">
+            <column name="vatid" length="100" />
+        </property>
+    </class>
+</hibernate-mapping>

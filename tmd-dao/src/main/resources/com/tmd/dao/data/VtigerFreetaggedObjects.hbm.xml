@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerFreetaggedObjects" table="vtiger_freetagged_objects" catalog="vtiger" optimistic-lock="version">
+        <composite-id name="id" class="com.tmd.dao.data.VtigerFreetaggedObjectsId">
+            <key-property name="tagId" type="int">
+                <column name="tag_id" />
+            </key-property>
+            <key-property name="taggerId" type="int">
+                <column name="tagger_id" />
+            </key-property>
+            <key-property name="objectId" type="int">
+                <column name="object_id" />
+            </key-property>
+        </composite-id>
+        <property name="taggedOn" type="timestamp">
+            <column name="tagged_on" length="19" not-null="true" />
+        </property>
+        <property name="module" type="string">
+            <column name="module" length="50" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

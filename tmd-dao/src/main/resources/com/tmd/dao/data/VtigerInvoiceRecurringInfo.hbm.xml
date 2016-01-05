@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerInvoiceRecurringInfo" table="vtiger_invoice_recurring_info" catalog="vtiger" optimistic-lock="version">
+        <id name="salesorderid" type="int">
+            <column name="salesorderid" />
+            <generator class="assigned" />
+        </id>
+        <property name="recurringFrequency" type="string">
+            <column name="recurring_frequency" length="200" />
+        </property>
+        <property name="startPeriod" type="date">
+            <column name="start_period" length="10" />
+        </property>
+        <property name="endPeriod" type="date">
+            <column name="end_period" length="10" />
+        </property>
+        <property name="lastRecurringDate" type="date">
+            <column name="last_recurring_date" length="10" />
+        </property>
+        <property name="paymentDuration" type="string">
+            <column name="payment_duration" length="200" />
+        </property>
+        <property name="invoiceStatus" type="string">
+            <column name="invoice_status" length="200" />
+        </property>
+    </class>
+</hibernate-mapping>

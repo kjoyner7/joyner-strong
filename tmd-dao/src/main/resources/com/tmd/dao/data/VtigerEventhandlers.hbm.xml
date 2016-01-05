@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerEventhandlers" table="vtiger_eventhandlers" catalog="vtiger" optimistic-lock="version">
+        <composite-id name="id" class="com.tmd.dao.data.VtigerEventhandlersId">
+            <key-property name="eventhandlerId" type="int">
+                <column name="eventhandler_id" />
+            </key-property>
+            <key-property name="eventName" type="string">
+                <column name="event_name" length="100" />
+            </key-property>
+            <key-property name="handlerClass" type="string">
+                <column name="handler_class" length="100" />
+            </key-property>
+        </composite-id>
+        <property name="handlerPath" type="string">
+            <column name="handler_path" length="400" not-null="true" />
+        </property>
+        <property name="cond" type="string">
+            <column name="cond" length="65535" />
+        </property>
+        <property name="isActive" type="int">
+            <column name="is_active" not-null="true" />
+        </property>
+        <property name="dependentOn" type="string">
+            <column name="dependent_on" />
+        </property>
+    </class>
+</hibernate-mapping>

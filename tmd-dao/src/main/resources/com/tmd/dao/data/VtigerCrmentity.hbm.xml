@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerCrmentity" table="vtiger_crmentity" catalog="vtiger">
+        <id name="crmid" type="int">
+            <column name="crmid" />
+            <generator class="assigned" />
+        </id>
+        <version name="version" type="int">
+            <column name="version" not-null="true" />
+        </version>
+        <property name="smcreatorid" type="int">
+            <column name="smcreatorid" not-null="true" />
+        </property>
+        <property name="smownerid" type="int">
+            <column name="smownerid" not-null="true" />
+        </property>
+        <property name="modifiedby" type="int">
+            <column name="modifiedby" not-null="true" />
+        </property>
+        <property name="setype" type="string">
+            <column name="setype" length="30" not-null="true" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" length="65535" />
+        </property>
+        <property name="createdtime" type="timestamp">
+            <column name="createdtime" length="19" not-null="true" />
+        </property>
+        <property name="modifiedtime" type="timestamp">
+            <column name="modifiedtime" length="19" not-null="true" />
+        </property>
+        <property name="viewedtime" type="timestamp">
+            <column name="viewedtime" length="19" />
+        </property>
+        <property name="status" type="string">
+            <column name="status" length="50" />
+        </property>
+        <property name="presence" type="java.lang.Integer">
+            <column name="presence" />
+        </property>
+        <property name="deleted" type="int">
+            <column name="deleted" not-null="true" />
+        </property>
+        <property name="label" type="string">
+            <column name="label" />
+        </property>
+        <one-to-one name="vtigerAssets" class="com.tmd.dao.data.VtigerAssets"></one-to-one>
+        <set name="vtigerPbxmanagerPhonelookups" table="vtiger_pbxmanager_phonelookup" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="crmid" />
+            </key>
+            <one-to-many class="com.tmd.dao.data.VtigerPbxmanagerPhonelookup" />
+        </set>
+        <one-to-one name="vtigerService" class="com.tmd.dao.data.VtigerService"></one-to-one>
+        <set name="vtigerSenotesrels" table="vtiger_senotesrel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="crmid" not-null="true" />
+            </key>
+            <one-to-many class="com.tmd.dao.data.VtigerSenotesrel" />
+        </set>
+    </class>
+</hibernate-mapping>

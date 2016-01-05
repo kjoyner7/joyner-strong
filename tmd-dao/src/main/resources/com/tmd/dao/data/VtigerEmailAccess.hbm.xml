@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerEmailAccess" table="vtiger_email_access" catalog="vtiger" optimistic-lock="version">
+        <composite-id name="id" class="com.tmd.dao.data.VtigerEmailAccessId">
+            <key-property name="crmid" type="java.lang.Integer">
+                <column name="crmid" />
+            </key-property>
+            <key-property name="mailid" type="java.lang.Integer">
+                <column name="mailid" />
+            </key-property>
+            <key-property name="accessdate" type="date">
+                <column name="accessdate" length="10" />
+            </key-property>
+            <key-property name="accesstime" type="timestamp">
+                <column name="accesstime" length="19" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

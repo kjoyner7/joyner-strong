@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerEmaildetails" table="vtiger_emaildetails" catalog="vtiger" optimistic-lock="version">
+        <id name="emailid" type="int">
+            <column name="emailid" />
+            <generator class="assigned" />
+        </id>
+        <property name="fromEmail" type="string">
+            <column name="from_email" length="50" not-null="true" />
+        </property>
+        <property name="toEmail" type="string">
+            <column name="to_email" length="65535" />
+        </property>
+        <property name="ccEmail" type="string">
+            <column name="cc_email" length="65535" />
+        </property>
+        <property name="bccEmail" type="string">
+            <column name="bcc_email" length="65535" />
+        </property>
+        <property name="assignedUserEmail" type="string">
+            <column name="assigned_user_email" length="50" not-null="true" />
+        </property>
+        <property name="idlists" type="string">
+            <column name="idlists" length="65535" />
+        </property>
+        <property name="emailFlag" type="string">
+            <column name="email_flag" length="50" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

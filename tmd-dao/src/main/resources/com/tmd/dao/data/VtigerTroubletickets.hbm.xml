@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerTroubletickets" table="vtiger_troubletickets" catalog="vtiger" optimistic-lock="version">
+        <id name="ticketid" type="int">
+            <column name="ticketid" />
+            <generator class="assigned" />
+        </id>
+        <property name="ticketNo" type="string">
+            <column name="ticket_no" length="100" not-null="true" />
+        </property>
+        <property name="groupname" type="string">
+            <column name="groupname" length="100" />
+        </property>
+        <property name="parentId" type="string">
+            <column name="parent_id" length="100" />
+        </property>
+        <property name="productId" type="string">
+            <column name="product_id" length="100" />
+        </property>
+        <property name="priority" type="string">
+            <column name="priority" length="200" />
+        </property>
+        <property name="severity" type="string">
+            <column name="severity" length="200" />
+        </property>
+        <property name="status" type="string">
+            <column name="status" length="200" />
+        </property>
+        <property name="category" type="string">
+            <column name="category" length="200" />
+        </property>
+        <property name="title" type="string">
+            <column name="title" not-null="true" />
+        </property>
+        <property name="solution" type="string">
+            <column name="solution" length="65535" />
+        </property>
+        <property name="updateLog" type="string">
+            <column name="update_log" length="65535" />
+        </property>
+        <property name="versionId" type="java.lang.Integer">
+            <column name="version_id" />
+        </property>
+        <property name="hours" type="big_decimal">
+            <column name="hours" precision="25" scale="8" />
+        </property>
+        <property name="days" type="big_decimal">
+            <column name="days" precision="25" scale="8" />
+        </property>
+        <property name="contactId" type="java.lang.Integer">
+            <column name="contact_id" />
+        </property>
+    </class>
+</hibernate-mapping>

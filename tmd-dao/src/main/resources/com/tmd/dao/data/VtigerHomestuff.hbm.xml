@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerHomestuff" table="vtiger_homestuff" catalog="vtiger" optimistic-lock="version">
+        <id name="stuffid" type="int">
+            <column name="stuffid" />
+            <generator class="assigned" />
+        </id>
+        <property name="stuffsequence" type="int">
+            <column name="stuffsequence" not-null="true" />
+        </property>
+        <property name="stufftype" type="string">
+            <column name="stufftype" length="100" />
+        </property>
+        <property name="userid" type="int">
+            <column name="userid" not-null="true" />
+        </property>
+        <property name="visible" type="int">
+            <column name="visible" not-null="true" />
+        </property>
+        <property name="stufftitle" type="string">
+            <column name="stufftitle" length="100" />
+        </property>
+    </class>
+</hibernate-mapping>

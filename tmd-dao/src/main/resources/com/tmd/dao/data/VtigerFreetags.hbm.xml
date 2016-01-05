@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerFreetags" table="vtiger_freetags" catalog="vtiger" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="tag" type="string">
+            <column name="tag" length="50" not-null="true" />
+        </property>
+        <property name="rawTag" type="string">
+            <column name="raw_tag" length="50" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

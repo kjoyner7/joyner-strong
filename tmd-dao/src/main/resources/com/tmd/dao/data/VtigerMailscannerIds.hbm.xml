@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 9, 2015 2:35:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tmd.dao.data.VtigerMailscannerIds" table="vtiger_mailscanner_ids" catalog="vtiger" optimistic-lock="version">
+        <composite-id name="id" class="com.tmd.dao.data.VtigerMailscannerIdsId">
+            <key-property name="scannerid" type="java.lang.Integer">
+                <column name="scannerid" />
+            </key-property>
+            <key-property name="messageid" type="string">
+                <column name="messageid" length="512" />
+            </key-property>
+            <key-property name="crmid" type="java.lang.Integer">
+                <column name="crmid" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>
