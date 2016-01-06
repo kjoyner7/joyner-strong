@@ -3,5 +3,6 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@ taglib prefix="render" tagdir="/WEB-INF/tags/render" %> 
 This is the footer
+</center>
 </body>
 </html>

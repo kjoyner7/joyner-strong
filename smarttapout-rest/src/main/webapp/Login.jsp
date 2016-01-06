@@ -30,7 +30,6 @@
 </div>
 <div id="mainContent">
 </div>
-</center>
 <script type="text/javascript">
 $('#btnSubmit').click(function(){
 	if($('#username').val().length == 0){
@@ -60,7 +59,11 @@ $('#btnSubmit').click(function(){
 		          // process the response		      	  
 		          		if(msg[0].found.indexOf("yes") != -1){
 			      			$('#checkin').hide();
-			      			showList();
+			      			if(msg[0].role.indexOf("manager") != -1){
+			      				window.location = "manager.jsp";
+			      			}else{
+			      				showList();
+			      			}
 			      		//	window.location = ("rest/tasks/"+$('#username').val());
 			      			//$('#mainContent').html("<h2>Made it back</h2>");
 		          		}else if(msg[0].found.indexOf("no") != -1){
@@ -104,7 +107,7 @@ function showList(){
 		       //     alert(textStatus); // this comes back as "error"
 		        	    alert(errorThrown);
 						alert(jqXHR.responseText);
-						alert("There was a problem the list from the server.\nPlease try again later or contact your support.");	                   
+						alert("There was a problem retrieving the list from the server.\nPlease try again later or contact your support.");	                   
 		      	}
 		});
 }
