@@ -10,12 +10,14 @@
         <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property> 
         
         <mapping resource="com/tmd/dao/data/TmdActiveProcedures.hbm.xml" />
+        <mapping resource="com/tmd/dao/data/TmdEmployeeStatus.hbm.xml" />
         <mapping resource="com/tmd/dao/data/TmdEmployeeToOrganization.hbm.xml" />
         <mapping resource="com/tmd/dao/data/TmdEmployeeToStore.hbm.xml" />
         <mapping resource="com/tmd/dao/data/TmdEndOfShift.hbm.xml"/>
         <mapping resource="com/tmd/dao/data/TmdOrganizations.hbm.xml" />
         <mapping resource="com/tmd/dao/data/TmdProcedures.hbm.xml" />
         <mapping resource="com/tmd/dao/data/TmdProceduresHistory.hbm.xml" />
+        <mapping resource="com/tmd/dao/data/TmdRolesToStore.hbm.xml" />
         <mapping resource="com/tmd/dao/data/TmdStore.hbm.xml" />
         <mapping resource="com/tmd/dao/data/VtigerRole.hbm.xml" />
         <mapping resource="com/tmd/dao/data/VtigerUser2role.hbm.xml" />

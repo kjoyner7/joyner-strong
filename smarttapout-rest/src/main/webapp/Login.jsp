@@ -59,7 +59,7 @@ $('#btnSubmit').click(function(){
 		          // process the response		      	  
 		          		if(msg[0].found.indexOf("yes") != -1){
 			      			$('#checkin').hide();
-			      			if(msg[0].role.indexOf("manager") != -1){
+			      			if(msg[0].role.indexOf("Manager") != -1){
 			      				window.location = "manager.jsp";
 			      			}else{
 			      				showList();
@@ -107,7 +107,7 @@ function showList(){
 		       //     alert(textStatus); // this comes back as "error"
 		        	    alert(errorThrown);
 						alert(jqXHR.responseText);
-						alert("There was a problem retrieving the list from the server.\nPlease try again later or contact your support.");	                   
+						alert("There was a problem the list from the server.\nPlease try again later or contact your support.");	                   
 		      	}
 		});
 }

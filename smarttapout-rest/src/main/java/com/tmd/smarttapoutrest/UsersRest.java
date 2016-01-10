@@ -34,16 +34,14 @@ public class UsersRest {
 	@Produces("application/json")
 	public String checkUser(@Context UriInfo ui){ 
 		String msg="message";
-		/* Users user = new Users();
+		Users user = new Users();
 		MultivaluedMap<String, String> queryParams = ui.getQueryParameters();
 		log.debug("qp size: [{}]", queryParams.size());
 		String username = queryParams.getFirst("username");
 		String password = queryParams.getFirst("password");
 		log.debug("username: [{}] with password: [{}]", username, password);
-		msg = user.checkForUser(username, password); */
-		// following for workable situation with no database connection
-		msg = "[{\"found\":\"yes\",\"message\":\"Bubba\",\"role\":\"manager\"}]";
-		// end
+		msg = user.checkForUser(username, password);
+		
 		return msg;
 	}
 

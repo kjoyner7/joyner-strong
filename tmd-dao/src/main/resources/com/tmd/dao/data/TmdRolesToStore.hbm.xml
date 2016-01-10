@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="com.tmd.dao.data.TmdRolesToStore" table="tmd_roles_to_store">
+        <id name="tmdRolesToStoreUid" type="java.lang.Integer">
+            <column name="tmd_roles_to_store_uid" />
+            <generator class="identity" />
+        </id>
+        <property name="roleId" type="string">
+            <column name="roleid" length="255"/>
+        </property>
+        <property name="tmdStoreUid" type="java.lang.Integer">
+        	<column name="tmd_store_uid" />
+        </property>
+        <property name="dateAdded" type="timestamp">
+            <column name="date_added" length="19"  />
+        </property>
+        <property name="dateModified" type="timestamp">
+            <column name="date_modified" length="19"/>
+        </property>
+    </class>
+</hibernate-mapping>

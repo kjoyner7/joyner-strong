@@ -1,12 +1,8 @@
 package com.tmd.dao.db;
 
 import java.util.List;
-
-import javax.naming.InitialContext;
-
 import org.hibernate.Query;
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
 import org.hibernate.hql.ast.QuerySyntaxException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

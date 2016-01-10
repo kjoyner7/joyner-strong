@@ -3,6 +3,7 @@ package com.tmd.smarttapoutrest;
 import java.util.List;
 
 import javax.ws.rs.Consumes;
+import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -13,8 +14,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.tmd.dao.data.TmdEmployeeToStore;
+import com.tmd.dao.data.TmdRolesToStore;
+import com.tmd.dao.data.VtigerRole;
 import com.tmd.dao.data.VtigerUsers;
 import com.tmd.dao.db.TmdEmployeeToStoreDAO;
+import com.tmd.dao.db.TmdRolesToStoreDAO;
+import com.tmd.dao.db.VtigerRoleDAO;
 import com.tmd.dao.db.VtigerUsersDAO;
 
 @Path("/employee")
@@ -38,6 +43,7 @@ public class ManageEmployees {
 		log.debug("storeid: [{}]", storeid);
 		String retJson = null;
 		List<TmdEmployeeToStore> employees = TmdEmployeeToStoreDAO.getEmployees(storeid);
+		List<TmdRolesToStore> roles = TmdRolesToStoreDAO.getRolesForStore(storeid);
 		VtigerUsers user = null;
 		if(null != employees){
 			retJson = "[{\"found\":\"yes\",\"name\":[";
@@ -50,8 +56,15 @@ public class ManageEmployees {
 				log.debug("added user [{}]", user.getFirstName());
 			}
 			retJson = retJson.substring(0, retJson.length()-1);
+			// we have all the employees, now let's get all the roles for this store in case we need them
+			retJson = retJson + "],\"roles\":[";
+			for(TmdRolesToStore role : roles){
+				VtigerRole roleName = VtigerRoleDAO.findByRoleId(role.getRoleId());
+				retJson = retJson + "{\"role\":\"" + roleName.getRolename() + "\"},";
+			}
+			retJson = retJson.substring(0, retJson.length()-1);
 			retJson = retJson + "]}]";
-			//retJson = retJson + "]";
+			log.debug("retJson: [{}]", retJson);
 		}else{
 			// employee not found in db
 			retJson = retJson +"\"found\":\"no\"}]";
@@ -60,5 +73,27 @@ public class ManageEmployees {
 		
 		return retJson;
 	}
-
+	
+	/**
+	 * Add new employee
+	 */
+	@POST
+	@Path("/add")
+	@Produces("application/json")
+	public String addEmployee(@FormParam("userInfo") String userInfo){
+		String msg="[{\"found\":\"yes\",\"message\":\"Shift Tasks Finished\"}]";
+		
+		return msg;
+	}
+	
+	/**
+	 * Make employee inactive
+	 */
+	@POST
+	@Path("/delete")
+	@Produces("application/json")
+	public String makeEmployeeInactive(@FormParam("userid") String userid){
+		String msg="[{\"found\":\"yes\",\"message\":\"Shift Tasks Finished\"}]";
+		return msg;
+	}
 }
