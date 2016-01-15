@@ -80,8 +80,16 @@ public class ManageEmployees {
 	@POST
 	@Path("/add")
 	@Produces("application/json")
-	public String addEmployee(@FormParam("userInfo") String userInfo){
+	public String addEmployee(@FormParam("first") String fname, @FormParam("last") String lname, 
+			@FormParam("user") String uName, @FormParam("password") String pword, @FormParam("role") String role){
 		String msg="[{\"found\":\"yes\",\"message\":\"Shift Tasks Finished\"}]";
+		String email = "info@tmd.com";
+		VtigerUsers user = new VtigerUsers();
+		user.setFirstName(fname);
+		user.setLastName(lname);
+		user.setUserName(uName);
+		user.setUserHash(pword);
+		VtigerUsers newUser = VtigerUsersDAO.addUser(user);
 		
 		return msg;
 	}

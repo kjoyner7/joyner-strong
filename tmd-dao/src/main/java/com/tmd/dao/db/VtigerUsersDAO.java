@@ -10,6 +10,8 @@ import org.hibernate.SessionFactory;
 import org.hibernate.hql.ast.QuerySyntaxException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import com.tmd.dao.data.TmdActiveProcedures;
 import com.tmd.dao.data.VtigerUsers;
 
 public class VtigerUsersDAO {
@@ -87,6 +89,27 @@ public class VtigerUsersDAO {
 			DAOHelper.closeSession(session);
 		}
 		return user; 
+		
+	}
+	
+	/**
+	 * Adds user to VtigerUsers table
+	 * 
+	 * @param VtigerUsers user
+	 * 
+	 * @return VtigerUsers object
+	 */
+	public static VtigerUsers addUser(VtigerUsers user){
+		if (user == null) {
+			throw new IllegalArgumentException("persistent object VtigerUsers can't be null");
+		}
+		log.debug("Merging user [{}] ", user.getLastName());
+		
+		Session session = DAOHelper.openSession();
+		VtigerUsers newUsers = (VtigerUsers) session.merge(user);
+		log.debug("New user id [{}]", newUsers.getId());
+		DAOHelper.closeSession(session);
+		return newUsers;
 		
 	}
 
