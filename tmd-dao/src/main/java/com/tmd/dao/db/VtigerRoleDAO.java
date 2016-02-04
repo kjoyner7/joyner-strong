@@ -43,5 +43,36 @@ public class VtigerRoleDAO {
 		return role; 
 		
 	}
+	
+	/**
+	 * Returns Role object based on role id
+	 * 
+	 * @param roleName String
+	 * 
+	 * @return object VtigerRole
+	 */
+	@SuppressWarnings("unchecked")
+	public static VtigerRole findByRoleName(String roleName){
+		log.debug("Getting roles with role id of [{}]", roleName);
+		Session session = DAOHelper.openSession();
+		List<VtigerRole> roles = null;
+		VtigerRole role = null;
+		
+		try{
+			Query q = session.createQuery("from VtigerRole where rolename = :role_name");
+			q.setString("role_name", roleName);
+			roles = q.list();
+			if((roles != null) && (!roles.isEmpty())){
+				log.debug("number of roles found: [{}]", roles.size());
+				role = roles.get(0);
+			}
+		}catch (QuerySyntaxException ex){
+			log.debug("error getting role: [{}]", ex.getMessage());
+		}finally{
+			DAOHelper.closeSession(session);
+		}
+		return role; 
+		
+	}
 
 }

@@ -11,6 +11,7 @@ import org.slf4j.LoggerFactory;
 
 import com.tmd.dao.data.TmdEmployeeToOrganization;
 import com.tmd.dao.data.TmdEmployeeToStore;
+import com.tmd.dao.data.VtigerUsers;
 
 public class TmdEmployeeToStoreDAO {
 	private static final Logger log = LoggerFactory.getLogger(TmdEmployeeToStoreDAO.class);
@@ -69,6 +70,27 @@ public class TmdEmployeeToStoreDAO {
 			DAOHelper.closeSession(session);
 		}
 		return user2store; 
+		
+	}
+	
+	/**
+	 * Adds user to TmdEmployeeToStore table
+	 * 
+	 * @param TmdEmployeeToStore user
+	 * 
+	 * @return TmdEmployeeToStore object
+	 */
+	public static TmdEmployeeToStore addUserToStore(TmdEmployeeToStore user){
+		if (user == null) {
+			throw new IllegalArgumentException("persistent object TmdEmployeeToStore can't be null");
+		}
+		log.debug("Merging user [{}] ", user.getVtigerUsersId());
+		
+		Session session = DAOHelper.openSession();
+		TmdEmployeeToStore newUsers = (TmdEmployeeToStore) session.merge(user);
+		log.debug("New user id [{}]", newUsers.getTmdEmployeeToStoreUid());
+		DAOHelper.closeSession(session);
+		return newUsers;
 		
 	}
 

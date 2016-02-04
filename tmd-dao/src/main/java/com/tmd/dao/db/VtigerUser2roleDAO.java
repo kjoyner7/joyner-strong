@@ -11,6 +11,7 @@ import org.hibernate.hql.ast.QuerySyntaxException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import com.tmd.dao.data.VtigerUser2role;
+import com.tmd.dao.data.VtigerUsers;
 
 public class VtigerUser2roleDAO {
 	private static final Logger log = LoggerFactory.getLogger(VtigerUser2roleDAO.class);
@@ -45,6 +46,27 @@ public class VtigerUser2roleDAO {
 		}
 		return user; 
 
+	}
+	
+	/**
+	 * Adds user to VtigerUser2Role table
+	 * 
+	 * @param VtigerUser2role userid
+	 * 
+	 * @return VtigerUsers object
+	 */
+	public static VtigerUser2role addUser2Role(VtigerUser2role userRole){
+		if (userRole == null) {
+			throw new IllegalArgumentException("persistent object useRole can't be null");
+		}
+		log.debug("Merging user [{}] ", userRole.getUserid());
+		
+		Session session = DAOHelper.openSession();
+		VtigerUser2role newUsers = (VtigerUser2role) session.merge(userRole);
+		log.debug("New user id [{}]", newUsers.getUserid());
+		DAOHelper.closeSession(session);
+		return newUsers;
+		
 	}
 	
 
